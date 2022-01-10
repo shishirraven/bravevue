@@ -25,7 +25,6 @@ props :
 }, // Props ends here
 data : function(){
 	return {
-		activeTab : {},
 		dialogVisible : false,
 		dialogOrignalWidth : "auto"
 	}
