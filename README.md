@@ -1,24 +1,21 @@
 # bravevue
+A Modern Vue UI Library
+
+# Contained Components. 
+- BraveDialog [Docs](https://shishirraven.github.io/bravevue/#/brave_dialog)
+- BravePositionDialog [Docs](https://shishirraven.github.io/bravevue/#/brave_position_dialog)
+- Brave Gist Embed [Docs](https://shishirraven.github.io/bravevue/#/brave_gist_embed)
+
 
 ## Project setup
 ```
-yarn install
+npm i bravevue
+```
+```
+yarn add bravevue
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Demo & Documentation
+[https://shishirraven.github.io/bravevue/#/brave_gist_embed](https://shishirraven.github.io/bravevue/#/brave_gist_embed)
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
