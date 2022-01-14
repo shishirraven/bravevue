@@ -3,7 +3,7 @@
 	<div class="dialog container m-3 d-flex flex-column" :style="{'width':dialogOrignalWidth}">
 		<div class="tab-header  pt-4">
 			<div class="px-4 py-3 h5">
-				<slot name="dialog-heading">Heading2</slot>
+				<slot name="dialog-heading">Heading</slot>
 			</div> 
 		</div>
 		<div class="tab-panel flex-grow-1">

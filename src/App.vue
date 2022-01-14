@@ -55,6 +55,15 @@
             <i class="bi me-2 fs-4 bi-github"></i>
             Gist Embed
           </router-link>
+
+           <router-link
+            to="/brave_drop_menu"
+            type="button"
+            class="btn  btn-large text-start rounded-pill py-2 px-3"
+          >
+            <i class="bi me-2 fs-4 bi-menu-button-wide"></i>
+            Drop Menu
+          </router-link>
 <!-- 
           <router-link
             to="/brave_tip"

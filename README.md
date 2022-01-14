@@ -5,6 +5,7 @@ A Modern Vue UI Library
 - BraveDialog [Docs](https://shishirraven.github.io/bravevue/#/brave_dialog)
 - BravePositionDialog [Docs](https://shishirraven.github.io/bravevue/#/brave_position_dialog)
 - Brave Gist Embed [Docs](https://shishirraven.github.io/bravevue/#/brave_gist_embed)
+- Brave DropMenu [Docs](https://shishirraven.github.io/bravevue/#/brave_drop_menu)
 
 
 ## Project setup
