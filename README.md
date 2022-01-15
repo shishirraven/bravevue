@@ -17,6 +17,6 @@ yarn add bravevue
 ```
 
 ## Demo & Documentation
-[https://shishirraven.github.io/bravevue/#/brave_gist_embed](https://shishirraven.github.io/bravevue/#/brave_gist_embed)
+[https://shishirraven.github.io/bravevue/](https://shishirraven.github.io/bravevue/)
 
 

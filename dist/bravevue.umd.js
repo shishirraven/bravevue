@@ -826,6 +826,20 @@ module.exports = fails(function () {
 
 /***/ }),
 
+/***/ "45db":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".drop-button[data-v-5467b180]{position:relative;display:inline-block}.back-drop[data-v-5467b180]{position:fixed;display:flex;justify-content:center;align-items:flex-start;top:0;bottom:0;left:0;right:0;overflow:auto;z-index:10000;background-color:rgba(0,0,0,.6431372549019608)}.dropdown-items[data-v-5467b180]{overflow:auto;position:absolute;z-index:1;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:opacity .7s ease 0s,color .7s ease 0s,transform .2s ease 0s;transform:translateX(0) translateZ(0)}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "485a":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2833,6 +2847,17 @@ module.exports = function (V, P) {
 
 /***/ }),
 
+/***/ "de02":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BraveSelect_vue_vue_type_style_index_0_id_5467b180_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("df86");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BraveSelect_vue_vue_type_style_index_0_id_5467b180_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BraveSelect_vue_vue_type_style_index_0_id_5467b180_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "df75":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3159,6 +3184,22 @@ var substr = 'ab'.substr(-1) === 'b'
 
 /***/ }),
 
+/***/ "df86":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("45db");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("5c901ca6", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "e330":
 /***/ (function(module, exports) {
 
@@ -3369,6 +3410,7 @@ __webpack_require__.d(__webpack_exports__, "BraveDialog", function() { return /*
 __webpack_require__.d(__webpack_exports__, "BravePositionDialog", function() { return /* reexport */ BravePositionDialog; });
 __webpack_require__.d(__webpack_exports__, "BraveGistEmbed", function() { return /* reexport */ BraveGistEmbed; });
 __webpack_require__.d(__webpack_exports__, "BraveDropMenu", function() { return /* reexport */ BraveDropMenu; });
+__webpack_require__.d(__webpack_exports__, "BraveSelect", function() { return /* reexport */ BraveSelect; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -5383,7 +5425,138 @@ var BraveDropMenu_component = normalizeComponent(
 )
 
 /* harmony default export */ var BraveDropMenu = (BraveDropMenu_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"941a2748-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BraveSelect.vue?vue&type=template&id=5467b180&scoped=true&
+var BraveSelectvue_type_template_id_5467b180_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"drop-button"},[_c('div',{ref:"button",staticClass:"drop-head",on:{"click":function($event){return _vm.toggleVisiblity()}}},[_vm._t("button",function(){return [_vm._v("Menu")]},{"selectedValue":_vm.selectedValue})],2),(_vm.isVisible)?_c('div',{directives:[{name:"clickoutside",rawName:"v-clickoutside",value:(_vm.hideByOutside),expression:"hideByOutside"}],ref:"menu",staticClass:"dropdown-items",class:_vm.dropdownClass},_vm._l((_vm.options),function(option,index){return _c('div',{key:index,on:{"click":function($event){_vm.selectedValue=option,_vm.hide()}}},[_vm._t("menu",null,{"option":option,"selectedValue":_vm.selectedValue})],2)}),0):_vm._e()])}
+var BraveSelectvue_type_template_id_5467b180_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/BraveSelect.vue?vue&type=template&id=5467b180&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BraveSelect.vue?vue&type=script&lang=js&
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ var BraveSelectvue_type_script_lang_js_ = ({
+  name: 'BraveDropSelect',
+  props: {
+    value: Object,
+    options: Array,
+    dropdownClass: String
+  },
+  directives: {
+    clickoutside: clickoutside
+  },
+  computed: {},
+  data: function data() {
+    return {
+      selectedValue: this.value,
+      isVisible: false,
+      skipToken: false
+    };
+  },
+  // Data ends here
+  created: function created() {},
+  updated: function updated() {
+    if (this.isVisible) this.setPosition();
+  },
+  watch: {
+    value: function value(newVal) {
+      this.selectedValue = newVal;
+    },
+    selectedValue: function selectedValue(newVal) {
+      this.$emit('input', newVal);
+    }
+  },
+  methods: {
+    toggleVisiblity: function toggleVisiblity() {
+      this.isVisible = !this.isVisible;
+      this.skipHide = true;
+    },
+    hide: function hide() {
+      this.isVisible = false;
+    },
+    hideByOutside: function hideByOutside() {
+      if (!this.skipHide) {
+        this.isVisible = false;
+      }
+
+      this.skipHide = false;
+    },
+    setPosition: function setPosition() {
+      var button = this.$refs.button;
+      var tooltip = this.$refs.menu;
+      floating_ui_dom_esm_computePosition(button, tooltip, {
+        placement: 'bottom-start',
+        middleware: [offset(6), flip(), shift({
+          padding: 5
+        }), size({
+          apply: function apply(_ref) {
+            var width = _ref.width,
+                height = _ref.height,
+                reference = _ref.reference;
+            // Do things with the data, e.g.
+            Object.assign(tooltip.style, {
+              maxWidth: "".concat(width, "px"),
+              maxHeight: "".concat(height, "px"),
+              minWidth: "".concat(reference.width, "px")
+            });
+          }
+        })]
+      }).then(function (_ref2) {
+        var x = _ref2.x,
+            y = _ref2.y;
+        Object.assign(tooltip.style, {
+          left: "".concat(x, "px"),
+          top: "".concat(y, "px")
+        });
+      });
+    }
+  } // Method ends here
+
+});
+// CONCATENATED MODULE: ./src/components/BraveSelect.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_BraveSelectvue_type_script_lang_js_ = (BraveSelectvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/BraveSelect.vue?vue&type=style&index=0&id=5467b180&scoped=true&lang=css&
+var BraveSelectvue_type_style_index_0_id_5467b180_scoped_true_lang_css_ = __webpack_require__("de02");
+
+// CONCATENATED MODULE: ./src/components/BraveSelect.vue
+
+
+
+
+
+
+/* normalize component */
+
+var BraveSelect_component = normalizeComponent(
+  components_BraveSelectvue_type_script_lang_js_,
+  BraveSelectvue_type_template_id_5467b180_scoped_true_render,
+  BraveSelectvue_type_template_id_5467b180_scoped_true_staticRenderFns,
+  false,
+  null,
+  "5467b180",
+  null
+  
+)
+
+/* harmony default export */ var BraveSelect = (BraveSelect_component.exports);
 // CONCATENATED MODULE: ./src/components/export.js
+
 
 
 

@@ -64,6 +64,15 @@
             <i class="bi me-2 fs-4 bi-menu-button-wide"></i>
             Drop Menu
           </router-link>
+
+          <router-link
+            to="/brave_select"
+            type="button"
+            class="btn  btn-large text-start rounded-pill py-2 px-3"
+          >
+            <i class="bi me-2 fs-4 bi-menu-button-wide"></i>
+            Select
+          </router-link>
 <!-- 
           <router-link
             to="/brave_tip"
@@ -212,30 +221,7 @@ $card-cap-bg: shift-color($light, 0%);
 }
 
 
-::-webkit-scrollbar-corner {
-  background: rgba(0, 0, 0, 0.5);
-}
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--scroll-bar-bg-color);
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-bar-color);
-  border-radius: 20px;
-  border: 3px solid var(--scroll-bar-bg-color);
-}
 
 .logo {
   height: 25px;
@@ -252,5 +238,27 @@ $card-cap-bg: shift-color($light, 0%);
 .splitpanes--horizontal > .splitpanes__splitter {
   min-height: 6px;
   background: linear-gradient(0deg, #ccc, #111);
+}
+
+
+// Custom Scrollbar
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }
 </style>
