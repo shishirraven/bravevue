@@ -9,8 +9,7 @@ import TreeNode from "@/components/TreeNode.vue"
 const app = createApp(App)
 
 const router = createRouter({
-  history: createWebHistory(),
-  base:"https://shishirraven.github.io/bravevue/",
+  history: createWebHistory("/bravevue/"),
   routes,
   linkActiveClass: "dark:bg-slate-800 ",
 });
