@@ -1,102 +1,30 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="p-3 m-3 p-md-5 m-md-5">
-    <img class="mb-4" alt="Vue logo" src="../assets/logo.svg">
-    
-    <h1>Welcome to BraveVue </h1>
-    <p>BraveVue is a collection of VueJS components. </p>
-    <p>Primarily the components are designed to create a minimilistic non-bloated framework</p>
-    <p>The Framework uses Bootstrap CSS Library</p>
+  <main class="flex-1 lg:p-16">
+        <div class="py-6">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-2">BraveVue</h1>
 
-
-    <h2>Installation</h2>
-
-    <div class="my-4">
-
-    <code class="fs-3  p-2 bg-light">
-      npm i bravevue
-    </code>
-    </div>
-    <hr class="my-5">
-    <h2 >Components</h2>
-
-    <h3 class="mt-4">Brave Dialog</h3>
-    Add Dialogs to your VueJS App for Almost anything. 
-
-    <h4 class="my-4">Examples</h4> 
-
-    <p>
-      Click the following button to see BraveDialog in action
-    </p>
-    <BraveDialog ref="bravedialog" dialogwidth="500px">
-      <template #dialog-heading>
-         <img class="me-3" alt="Vue logo" width="30px;" src="../assets/logo.png"> VueJS Dialog
-      </template>
-      <template #dialog-body>
-        <div class="p-4">This is a BraveVue Dialog VueJS Component</div>
-      </template>
-      <template #footer>
-        <div class="btn btn-primary text-white m-4" @click="$refs.bravedialog.hide()">Close</div>
-      </template>
-    </BraveDialog>
-    <div @click="$refs.bravedialog.show()" class="btn btn-lg btn-primary text-white px-4"><i class="bi bi-window"></i> Open Dialog</div>
-    <BraveGistEmbed class="my-4" url="https://gist.github.com/shishirraven/4b99ef6784c7477576e16df16db61fc3"></BraveGistEmbed>
-
-    <hr class="my-5">
-    <h4>How to use</h4>
-
-    <h5 class="py-3">1. Import the the component inside script tag. </h5>
-
-    <div class="my-4"><code class="bg-light p-3 fs-5 ">import {BraveDialog} from "bravevue"</code></div>
-
-    <h5 class="py-3">2. Add to your components</h5>
-    
-    <div class="my-4"><code class="bg-light p-3 fs-5 ">
-  components: {
-    BraveDialog, 
-    ...
-  },  
-  </code>
-    </div>
-    <h5 class="py-3">3. Use in your template</h5>
-    <p>
-      There are three Slots available. 
-    </p>
-    
-      <ul>
-        <li>dialog-heading</li>
-        <li>dialog-body</li>
-        <li>footer</li>
-      </ul>
-    <p>You can use these as shown below</p>
-    
-    <BraveGistEmbed url="https://gist.github.com/shishirraven/d9e9aee838f5fed86fdb366057edfdfc"></BraveGistEmbed>
-
-    <h4>Complete Example.</h4>
-    <BraveGistEmbed url="https://gist.github.com/shishirraven/cfb74452b90e7dc474a40a92575bd983"></BraveGistEmbed>
-
-                
-
-
-  </div>
+            <div class=" dark:text-slate-400 mb-10">Headless UI Library for Vue js (Vue 3)</div>
+            <p>BraveVue is a headless UI Library for Vue js applications.</p>
+            <p>Components are designed to be minimilistic and non-bloated.</p>
+            <p>BraveVue can work with any of the Popular CSS Frameworks(Tailwind, Bootstrap ...) and Custom CSS.</p>
+         
+          <h1 class="text-xl my-5">Installation</h1>
+         
+         <div  class="p-2 mb-10 rounded-sm bg-slate-50 dark:bg-slate-900"> npm i bravevue </div>
+                   
+         
+         </div>
+          <hr>
+          
+           
+          
+        </div>
+      </main>
 </template>
-
 <script>
-// @ is an alias to /src
-import BraveDialog from "@/components/BraveDialog"
-import BraveGistEmbed from "@/components/BraveGistEmbed"
+  export default {
 
-
-export default {
-  name: 'Home',
-  components: {
-    BraveDialog,
-    BraveGistEmbed
-  },
-  data : function(){
-    return {
-      src: "", 
-      script: "div"
-    }
   }
-}
 </script>

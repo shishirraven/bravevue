@@ -1,10 +1,21 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import './tailwind.css'
+//import "../node_modules/bravevue/dist/style.css";
 import App from './App.vue'
-import router from './router'
+import { routes } from './routes.js'
+import { createRouter, createWebHistory } from 'vue-router'
+import RenderTree1 from "@/components/RenderTree1.vue"
+import TreeNode from "@/components/TreeNode.vue"
+const app = createApp(App)
 
-Vue.config.productionTip = false
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  linkActiveClass: "dark:bg-slate-800 ",
+});
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+app.component("RenderTree1", RenderTree1); 
+app.component("TreeNode", TreeNode); 
+
+app.use(router)
+app.mount('#app')
