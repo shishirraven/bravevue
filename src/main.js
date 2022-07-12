@@ -10,6 +10,7 @@ const app = createApp(App)
 
 const router = createRouter({
   history: createWebHistory(),
+  base:"https://shishirraven.github.io/bravevue/",
   routes,
   linkActiveClass: "dark:bg-slate-800 ",
 });
