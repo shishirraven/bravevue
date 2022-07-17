@@ -48,7 +48,7 @@
               <h4
                 class=" leading-6 text-slate-900 font-semibold mb-2 dark:text-slate-200"
               >
-                Install Tailwind CSS
+                Install BraveVue
               </h4>
               <div class="">
                 <p>

@@ -7,6 +7,12 @@
         <div class="ml-2 ">Home </div>
     </router-link>
     <div class="text-sm tracking-wider py-4">COMPONENTS</div>
+     <router-link to="/brave_sidebar_layout" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-window-sidebar
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+         from-yellow-100 via-yellow-300 to-yellow-500"></i> 
+        <div class="ml-2">Sidebar Layout </div>
+    </router-link>
      <router-link to="/bravedialog" class="flex items-center p-3 ">
         <i class="bi me-2 text-xl bi-window
         dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
