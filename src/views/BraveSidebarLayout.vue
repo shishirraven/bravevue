@@ -4,7 +4,7 @@
     <div class="py-6">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <h1 class="text-4xl font-semibold mb-10">
-          <i class="bi me-2 text-xl bi-menu-button-wide"></i> Sidebar Layout
+          <i class="bi me-2 text-xl bi-window-sidebar text-4xl"></i> Sidebar Layout
         </h1>
         <div class="grid grid-cols-5 gap-4">
           <div class="col-span-2 ">
