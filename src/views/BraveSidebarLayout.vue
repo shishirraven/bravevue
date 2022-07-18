@@ -84,6 +84,7 @@
 <template #title>app.vue</template>
 <template #code>{{`<script>
 import { BraveSidebarLayout } from "bravevue";
+import "../node_modules/bravevue/dist/style.css";
 export default{
   components: {
     BraveSidebarLayout
@@ -120,26 +121,32 @@ export default{
             
 <BrTaSyntaxHighlighter langauge="html">
 <template #title>app.vue</template>
-<template #code>{{`<BraveSidebarLayout
+<template #code>{{`<template>
+<BraveSidebarLayout
     sidebar-class="  bg-slate-900 flex flex-col text-white "
     :sidebar-width="300"
   >
     <!-- SIDEBAR TEMPLATE -->
     <template v-slot:sidebar="{closeMenu,openMenu}">
         <div @click="closeMenu()" class="p-2 cursor-pointer text-2xl absolute right-0 top-0 md:hidden" >
-            <i class=" bi bi-x-circle"></i>
+            [ Close Sidebar ]
         </div>
-        <-- ADD YOU SIDEBAR HTML HERE  -->
+        <!-- ADD YOU SIDEBAR HTML HERE  -->
+        <div class="p-10 text-2xl mt-10">
+          PLACE YOUR SIDEBAR CONTENT HERE
+        </div>
     </template>
     <!-- MAIN CONTENT TEMPLATE -->
     <template v-slot:content="{closeMenu,openMenu}">
        <div class="p-2cursor-pointer text-2xl inline-block md:hidden" @click="openMenu()">
-            <i class=" bi bi-three-dots-vertical"></i>
+            <i class=" bi bi-three-dots-vertical"></i> [ Show Sidebar ]
         </div>
-        <-- ADDED ROUTERVIEW TO MAIN CONTENT AREA  -->
+        <!-- ADDED ROUTERVIEW TO MAIN CONTENT AREA  -->
+        <div class="p-10 text-2xl">PLACE YOUR CONTENT HERE</div>
         <router-view />
     </template>
-  </BraveSidebarLayout>`}}</template>
+  </BraveSidebarLayout>
+</template>`}}</template>
 </BrTaSyntaxHighlighter>  
             </div>
           </li>

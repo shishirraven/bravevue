@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import './tailwind.css'
-//import "../node_modules/bravevue/dist/style.css";
+import "../node_modules/bravevue/dist/style.css";
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
