@@ -55,7 +55,7 @@
             <div class="col-span-3">
                 <BrTaSyntaxHighlighter>
                     <template #title>Terminal</template>
-                    <template #code>{{`npm install bravevue13`}} </template>
+                    <template #code>{{`npm install bravevue`}} </template>
                 </BrTaSyntaxHighlighter>
              </div>
           </li>
