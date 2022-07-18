@@ -81,7 +81,7 @@
             <div class="col-span-3">
 
 <BrTaSyntaxHighlighter langauge="javascript">
-<template #title>YourView.vue</template>
+<template #title>app.vue</template>
 <template #code>{{`<script>
 import { BraveSidebarLayout } from "bravevue";
 export default{
@@ -119,7 +119,7 @@ export default{
             <div class="col-span-5">
             
 <BrTaSyntaxHighlighter langauge="html">
-<template #title>YourView.vue</template>
+<template #title>app.vue</template>
 <template #code>{{`<BraveSidebarLayout
     sidebar-class="  bg-slate-900 flex flex-col text-white "
     :sidebar-width="300"
