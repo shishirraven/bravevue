@@ -13,9 +13,12 @@
               a sidebar layout with a sidebar and a content area.
             </p>
             <p class="pb-5">
-                The sidebar of this page is a Live example of Sidebar Layout.
+              The sidebar of this page is a Live example of Sidebar Layout.
             </p>
           </div>
+              <div class="col-span-3 pl-3 pb-3 ">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KPPZEVCb4Fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
         </div>
 
         
