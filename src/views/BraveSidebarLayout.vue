@@ -6,7 +6,7 @@
         <h1 class="text-4xl font-semibold mb-10">
           <i class="bi me-2 text-xl bi-window-sidebar text-4xl"></i> Sidebar Layout
         </h1>
-        <div class="grid grid-cols-5 gap-4">
+        <div class="md:grid md:grid-cols-5 gap-4">
           <div class="col-span-2 ">
             <p class="pb-5">
               Brave Sidebar Layout is a Vue component that allows you to create
@@ -16,8 +16,10 @@
               The sidebar of this page is a Live example of Sidebar Layout.
             </p>
           </div>
-              <div class="col-span-3 pl-3 pb-3 ">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KPPZEVCb4Fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="col-span-3 md:pl-3 -mx-4 pb-3  ">
+                <div class="aspect-w-16  aspect-h-9">
+                  <iframe class="" src="https://www.youtube.com/embed/KPPZEVCb4Fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
               </div>
         </div>
 
