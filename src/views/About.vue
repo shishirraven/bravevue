@@ -10,7 +10,7 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
       <h2
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
-        Ready to dive in?
+        Ready to dive in?.shadow-gray-500s
         <br />
         <span class="text-indigo-600">Vite + Vue 3 + Tailwind CSS</span>
       </h2>
