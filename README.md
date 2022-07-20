@@ -14,5 +14,20 @@ npm i bravevue
 yarn add bravevue
 ```
 
+## Features. 
+
+- ### Headless
+  The Core Library is not dependent upon any CSS Library for Styling. 
+  You can completely change the look of the Components as you desire. 
+
+- ### Automic Components. 
+  The ideas was to build the library as neat and non-bloated as possible. These components are light weight. 
+
+- ### Extendable
+  The Components can use to compose your own components to allow create a further level of Abstraction. 
+
+- ### Tailwind Support
+  We love Tailwind and examples coded are in Tailwind. But you can easily use your own styling framework. 
+
 ## Demo & Documentation
 [https://shishirraven.github.io/bravevue/](https://shishirraven.github.io/bravevue/)
