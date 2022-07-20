@@ -2,8 +2,8 @@
 
 # BraveVue - Headless UI Library for Vue js (Vue 3)
 
-BraveVue JS is designed to help you break free of monotonous design and helps you build something beautiful. 
-This is achieved by giving your a Styleless Components that you can craft as you like.
+BraveVue JS is designed to help you break free of monotonous design and helps you build something UNIQUE & BEAUTIFUL. 
+We achieve this by giving your a Styleless Components that you can craft as you like.
 
 You can take BraveVue and build your own style libraries specific to your project. 
 
