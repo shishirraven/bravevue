@@ -24,7 +24,7 @@ export default{
             <div class="ml-2 text-lg">BraveVue</div>    
         </div>
             </router-link>
-      <SiteNavigation class="p-5 flex-grow overflow-auto" />
+      <SiteNavigation class="p-5 flex-grow overflow-auto" @jumpingToAnchor="closeMenu" />
       <div class="flex-shrink-0 flex border-t dark:border-slate-600 border-cyan-800 p-4">
           <a target="_blank" href="https://iamshishir.com/about-me/" class="flex-shrink-0 w-full group block">
             <div class="flex items-center">
