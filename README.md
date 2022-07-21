@@ -33,7 +33,7 @@ yarn add bravevue
   You have control but not complete control over the design unless your drill down into CSS. 
 
 - ### Tailwind Support
-  We love Tailwind and examples coded are in Tailwind. But you can easily use your own styling framework. 
+  We love Tailwind and examples coded here are in Tailwind. But you can easily use your own styling framework. 
 
 ## Demo & Documentation
 [https://shishirraven.github.io/bravevue/](https://shishirraven.github.io/bravevue/)
