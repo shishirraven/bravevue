@@ -13,6 +13,12 @@
          from-yellow-100 via-yellow-300 to-yellow-500"></i> 
         <div class="ml-2">Sidebar Layout </div>
     </router-link>
+     <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_slider" class="flex items-center p-3 ">
+        <i class="bi bi-window-dock 
+        dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Brave Slider </div>
+    </router-link>  
      <router-link @click.native="$emit('jumpingToAnchor')"  to="/bravedialog" class="flex items-center p-3 ">
         <i class="bi me-2 text-xl bi-window
         dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
@@ -26,12 +32,6 @@
         <div class="ml-2">Position Dialog</div>
     </router-link>
     
-    <router-link @click.native="$emit('jumpingToAnchor')"  to="/gistembed" class="flex items-center p-3 ">
-        <i class="bi me-2 text-xl bi-github
-        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
-        from-yellow-100 via-yellow-300 to-yellow-500"></i>
-        <div class="ml-2">Gist Embed</div>
-    </router-link>
     
     <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_dropmenu" class="flex items-center p-3 ">
         <i class="bi me-2 text-xl bi-menu-button-wide
@@ -55,12 +55,23 @@
         <div class="ml-2">Brave Tabs </div>
     </router-link>  
     
-    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_slider" class="flex items-center p-3 ">
-        <i class="bi bi-window-dock 
-        dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
+   
+
+    
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/gistembed" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-github
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
         from-yellow-100 via-yellow-300 to-yellow-500"></i>
-        <div class="ml-2">Brave Slider </div>
-    </router-link>  
+        <div class="ml-2">Gist Embed</div>
+    </router-link>
+    
+    
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_syntax_highlighter" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-code-square
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Syntax Highlighter</div>
+    </router-link>
     
     
     

@@ -9,7 +9,7 @@ import BraveGist from "./views/BraveGist.vue";
 import BraveSelect from "./views/BraveSelect.vue";
 import BraveTabs from "./views/BraveTabs.vue";
 import BraveSlider from "./views/BraveSlider.vue";
-import BraveSidebarLayout from "./views/BraveSidebarLayout.vue";
+import BraveSyntaxHighlighter from "./views/BraveSyntaxHighlighter.vue";
 import RequestAComponent from "./views/RequestAComponent.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
@@ -23,6 +23,15 @@ export const routes = [
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import("./views/BraveSidebarLayout.vue"),
+  },
+  {
+    path: "/brave_syntax_highlighter",
+    meta: { title: "Brave Syntax Highlighter" },
+    component: BraveSyntaxHighlighter,
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+   //component: () => import("./views/c.vue"),
   },
   {
     path: "/about",
