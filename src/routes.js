@@ -24,15 +24,15 @@ export const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import("./views/BraveSidebarLayout.vue"),
   },
-  {
-    path: "/brave_syntax_highlighter",
-    meta: { title: "Brave Syntax Highlighter" },
-    component: BraveSyntaxHighlighter,
-    // example of route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    //component: () => import("./views/BraveSyntaxHighlighter.vue"),
-  },
+  // {
+  //   path: "/brave_syntax_highlighter",
+  //   meta: { title: "Brave Syntax Highlighter" },
+  //   component: BraveSyntaxHighlighter,
+  //   // example of route level code-splitting
+  //   // this generates a separate chunk (About.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   //component: () => import("./views/BraveSyntaxHighlighter.vue"),
+  // },
   {
     path: "/about",
     meta: { title: "About" },
