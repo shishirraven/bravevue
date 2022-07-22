@@ -9,7 +9,7 @@ import BraveGist from "./views/BraveGist.vue";
 import BraveSelect from "./views/BraveSelect.vue";
 import BraveTabs from "./views/BraveTabs.vue";
 import BraveSlider from "./views/BraveSlider.vue";
-import BraveSyntaxHighlighter from "./views/BraveSyntaxHighlighter2.vue";
+import BraveSyntaxHighlighter from "./views/BraveSyntaxHighLighter.vue";
 import RequestAComponent from "./views/RequestAComponent.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
