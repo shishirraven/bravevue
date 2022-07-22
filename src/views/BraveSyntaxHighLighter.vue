@@ -265,6 +265,7 @@ import PositionDialogContextMenu from "@/components/uiexamples/PositionDialogCon
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed,BraveTabs } from "bravevue";
 export default {
+  name: "BraveSyntaxHighlighter",
   components: {  BraveGistEmbed, PositionDialogExampleVue,BraveTabs ,BrTaSyntaxHighlighter,PositionDialogExampleOnClick,PositionDialogContextMenu},  
 };
 </script>
