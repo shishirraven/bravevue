@@ -29,7 +29,7 @@
           <!-- ================================================================ -->
           <template #tab-head-upload>Demo for Javascript with Copy Button</template>
           <template #tab-panel-upload>
-            <BraveSyntaxHighlighterDemo />
+            <!-- <BraveSyntaxHighlighterDemo /> -->
           </template>
 
           <!-- ================================================================ -->
@@ -55,21 +55,15 @@
 </template>
 
 <script>
-import PositionDialogExampleVue from "@/components/uiexamples/PositionDialogExample.vue";
-import PositionDialogExampleOnClick from "@/components/uiexamples/PositionDialogExampleOnClick.vue";
-import PositionDialogContextMenu from "@/components/uiexamples/PositionDialogContextMenu.vue";
 import BraveSyntaxHighlighterDemo from "@/components/uiexamples/BraveSyntaxHighlighterDemo.vue";
-import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
-import { BraveGistEmbed, BraveTabs } from "bravevue";
+//import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
+import {  BraveTabs } from "bravevue";
 export default {
   components: {
-    BraveGistEmbed,
-    PositionDialogExampleVue,
+
     BraveTabs,
-    BrTaSyntaxHighlighter,
-    BraveSyntaxHighlighterDemo,
-    PositionDialogExampleOnClick,
-    PositionDialogContextMenu,
+    //BrTaSyntaxHighlighter,
+    // BraveSyntaxHighlighterDemo,
   },
 };
 </script>
