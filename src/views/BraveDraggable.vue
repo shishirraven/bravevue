@@ -8,13 +8,13 @@
     :visible="config.visible"
     :position="config.position"
     :placement="config.placement"
-    v-slot="{hide, onHandleMouseDown}"
-    @placement-change="config.placement = $event,saveState()"
-    @position-change="config.position = $event,saveState()"
+    v-slot="{hide, onHandleMouseDown,onHandleTouchMove,onHandleTouchEnd}"
+    @placement-change="config.placement = $event"
+    @position-change="config.position = $event"
     >  
     <div class="rounded-lg bg-white dark:bg-indigo-800 dark:text-white shadow-lg  border border-white lg:w-80"><!-- Body -->
 
-        <div @mousedown="onHandleMouseDown" class="cursor-move bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-t-lg 
+        <div @mousedown="onHandleMouseDown" @touchstart="onHandleMouseDown"  @touchmove="onHandleTouchMove" @touchend="onHandleTouchEnd"  class="cursor-move bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-t-lg 
         flex  gap-x-2">
             <!-- bootstrap move icon -->
             <i class="bi bi-arrows-move"></i>
@@ -51,19 +51,20 @@
         <h1 class="text-4xl font-semibold mb-10">
           <i class="bi me-2 text-xl  bi-arrows-move md:text-4xl"></i> Draggable
         </h1>
-        <div class="md:grid md:grid-cols-2 gap-4 prose dark:prose-invert">
+        <div class="md:grid md:grid-cols-2 gap-4 prose dark:prose-invert max-w-none">
           <div class="col-span-2 ">
             <p class="">
               Brave Draggable is a Vue component that helps you make any element draggable with mouse or touch. 
               </p>
               <p>
+              It is a  <b class="text-blue-500" >Wrapper Component</b>  that wraps the draggable element and provides the necessary events and methods to make it draggable.
+              </p>
+
+              <p>
                 The draggable element can be a div, a button, Image modal or any other element. You can set any element as a handle to drag the element.
             
               </p>
-            <p>
-                Brave draggable has features such as setting bounds out of which the drag should happen, automatic docking and 
-                snapping to the center of the screen with visual guide. 
-            </p>
+            
             <p>
 
             </p>
@@ -71,7 +72,12 @@
               See the Demo at the Top Right Corner of the screen. 
             </p>
           </div>
+          
         </div>
+
+        <div class="">
+            <img src="@/assets/gif/vue_draggable_demo.gif" alt="">
+          </div>
 
         
 
@@ -85,13 +91,16 @@
         
         <ul class="my-10">
             <li>
-                Unstyled and unopinionated. You can style it as you want.
+               🎨 Unstyled and unopinionated. You can style it as you want.
             </li>
             <li>
-                Automatic Docking 
+                🧭 Automatic Docking 
             </li>
             <li>
-                Center Snapping
+                🧲 Center Snapping with Visual Guide
+            </li>
+            <li>
+              ☝ Touch Support
             </li>
        
         </ul>
