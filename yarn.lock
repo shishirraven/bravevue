@@ -220,9 +220,9 @@
   dependencies:
     "fill-range" "^7.0.1"
 
-"bravevue@file:../bravevue_npm":
+"bravevue@^0.2.15":
   "resolved" "file:../bravevue_npm"
-  "version" "0.2.14"
+  "version" "0.2.15"
   dependencies:
     "@floating-ui/dom" "^0.5.0"
     "animate.css" "^4.1.1"
@@ -583,6 +583,11 @@
   "integrity" "sha512-ooDGNuXUjgCXfShliVYQ6+0iXqUFXn+zdNInPe0WZN9qINt9srbLGFGY5jeVL4MXtY20/4S8JaBcd8l6N6NfCQ=="
   "resolved" "https://registry.npmjs.org/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.10.tgz"
   "version" "0.1.10"
+
+"prettier@>=2.2.0":
+  "integrity" "sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g=="
+  "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.7.1.tgz"
+  "version" "2.7.1"
 
 "queue-microtask@^1.2.2":
   "integrity" "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
