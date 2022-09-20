@@ -57,7 +57,7 @@
               Brave Draggable is a Vue component that helps you make any element draggable with mouse or touch. 
               </p>
               <p>
-                The draggable element can be a div, a button, Image modeal or any other element. You can set any element as a handle to drag the element.
+                The draggable element can be a div, a button, Image modal or any other element. You can set any element as a handle to drag the element.
             
               </p>
             <p>
@@ -88,7 +88,7 @@
                 Unstyled and unopinionated. You can style it as you want.
             </li>
             <li>
-                Atomatic Docking 
+                Automatic Docking 
             </li>
             <li>
                 Center Snapping
