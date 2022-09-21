@@ -2,46 +2,43 @@
 <template>
     
   <main class="flex-1 lg:p-16">
-
     <BraveDraggable 
-    class=""
-    :visible="config.visible"
-    :position="config.position"
-    :placement="config.placement"
-    v-slot="{hide, onHandleMouseDown,onHandleTouchMove,onHandleTouchEnd}"
-    @placement-change="config.placement = $event"
-    @position-change="config.position = $event"
-    >  
-    <div class="rounded-lg bg-white dark:bg-indigo-800 dark:text-white shadow-lg  border border-white lg:w-80"><!-- Body -->
+        class=""
+        :visible="config.visible"
+        :position="config.position"
+        :placement="config.placement"
+        v-slot="{hide, onHandleMouseDown,onHandleTouchMove,onHandleTouchEnd}"
+        @placement-change="config.placement = $event"
+        @position-change="config.position = $event"
+        >  
+        <div class="rounded-lg bg-white dark:bg-indigo-800 dark:text-white shadow-lg  border border-white w-80"><!-- Body -->
+            <!-- TITLE BAR -->
+            <div @mousedown="onHandleMouseDown" 
+                @touchstart="onHandleMouseDown"  
+                @touchmove="onHandleTouchMove" 
+                @touchend="onHandleTouchEnd"  
+                class="cursor-move bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-t-lg flex  gap-x-2">
+                <!-- bootstrap move icon -->
+                <i class="bi bi-arrows-move"></i>
+                Demo Draggable Window
+            </div>
 
-        <div @mousedown="onHandleMouseDown" @touchstart="onHandleMouseDown"  @touchmove="onHandleTouchMove" @touchend="onHandleTouchEnd"  class="cursor-move bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-t-lg 
-        flex  gap-x-2">
-            <!-- bootstrap move icon -->
-            <i class="bi bi-arrows-move"></i>
-            Demo Draggable Window
+            <!-- CONTENT -->
+            <div class="p-5">
+                <p class="text-gray-500 dark:text-white text-sm">
+                    Hey, I am a Brave Draggable. Try to use the Title bar in this window to drag me arround.
+                </p>
+            </div>
+            <!-- Buttons -->
+            <div class="bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-b-lg flex justify-end gap-x-2">
+                <button type="button" @click="hide" class="text-gray-900 bg-white border border-gray-300 focus:outline-none
+                hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1 dark:bg-indigo-900
+                dark:text-white dark:border-indigo-100 dark:hover:bg-indigo-700 dark:hover:border-indigo-600
+                dark:focus:ring-gray-700"> 
+                    Close Demo </button>
+            </div>
         </div>
-
-
-
-        <div class="flex">
-            
-        <div class="p-5">
-            <p class="text-gray-500 dark:text-white text-sm">
-                Hey, I am a Brave Draggable. Try to use the Title bar in this window to drag me arround.
-            </p>
-        </div>
-    </div>
-    <!-- Buttons -->
-    <div class="bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-b-lg flex justify-end gap-x-2">
-        <button type="button" @click="hide" class="text-gray-900 bg-white border border-gray-300 focus:outline-none
-         hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1 dark:bg-indigo-900
-          dark:text-white dark:border-indigo-100 dark:hover:bg-indigo-700 dark:hover:border-indigo-600
-           dark:focus:ring-gray-700"> 
-            Close Demo </button>
-        </div>
-    </div>
-
-    </BraveDraggable>
+      </BraveDraggable>
 
 
 
@@ -191,41 +188,82 @@ export default{
             
 <BrTaSyntaxHighlighter langauge="html">
 <template #title>app.vue</template>
-<template #code>{{`    <BraveDraggable 
-    class=""
-    :visible="config.visible"
-    :position="config.position"
-    :placement="config.placement"
-    v-slot="{hide, onHandleMouseDown}"
-    @placement-change="config.placement = $event,saveState()"
-    @position-change="config.position = $event,saveState()"
-    >  
-    <div class="rounded-lg bg-white dark:bg-indigo-800 dark:text-white shadow-lg  border border-white lg:w-80"><!-- Body -->
-        <div @mousedown="onHandleMouseDown" class="cursor-move bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-t-lg 
-        flex  gap-x-2">
-            <!-- bootstrap move icon -->
-            <i class="bi bi-arrows-move"></i>
-            Demo Draggable Window
+<template #code>{{`<template>
+    <BraveDraggable 
+        class=""
+        :visible="config.visible"
+        :position="config.position"
+        :placement="config.placement"
+        v-slot="{hide, onHandleMouseDown,onHandleTouchMove,onHandleTouchEnd}"
+        @placement-change="config.placement = $event"
+        @position-change="config.position = $event"
+        >  
+        <div class="rounded-lg bg-white dark:bg-indigo-800 dark:text-white shadow-lg  border border-white w-80"><!-- Body -->
+            <!-- TITLE BAR -->
+            <div @mousedown="onHandleMouseDown" 
+                @touchstart="onHandleMouseDown"  
+                @touchmove="onHandleTouchMove" 
+                @touchend="onHandleTouchEnd"  
+                class="cursor-move bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-t-lg flex  gap-x-2">
+                <!-- bootstrap move icon -->
+                <i class="bi bi-arrows-move"></i>
+                Demo Draggable Window
+            </div>
+
+            <!-- CONTENT -->
+            <div class="p-5">
+                <p class="text-gray-500 dark:text-white text-sm">
+                    Hey, I am a Brave Draggable. Try to use the Title bar in this window to drag me arround.
+                </p>
+            </div>
+            <!-- Buttons -->
+            <div class="bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-b-lg flex justify-end gap-x-2">
+                <button type="button" @click="hide" class="text-gray-900 bg-white border border-gray-300 focus:outline-none
+                hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1 dark:bg-indigo-900
+                dark:text-white dark:border-indigo-100 dark:hover:bg-indigo-700 dark:hover:border-indigo-600
+                dark:focus:ring-gray-700"> 
+                    Close Demo </button>
+            </div>
         </div>
-        <div class="flex">
-        <div class="p-5">
-            <p class="text-gray-500 dark:text-white text-sm">
-                Hey, I am a Brave Draggable. Try to use the Title bar in this window to drag me arround.
-            </p>
-        </div>
-    </div>
-    <!-- Buttons -->
-    <div class="bg-slate-100 dark:bg-indigo-900 px-5 py-2 rounded-b-lg flex justify-end gap-x-2">
-        <button type="button" @click="hide" class="text-gray-900 bg-white border border-gray-300 focus:outline-none
-         hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1 dark:bg-indigo-900
-          dark:text-white dark:border-indigo-100 dark:hover:bg-indigo-700 dark:hover:border-indigo-600
-           dark:focus:ring-gray-700"> 
-            Close Demo </button>
-        </div>
+    </BraveDraggable>
+</template>
+<script>
+import { BraveDraggable } from "bravevue";
+export default {
+  components: { BraveDraggable },
+  data(){
+    return {
+        config : {
+                    visible: true,
+                    position: {
+                        top: '10px',
+                        right: '10px'
+                    },
+                    placement: 'top-right'
+                }
+    }
+  }
+};
+</script>
+`}}</template>
+</BrTaSyntaxHighlighter>  
+  <div class="prose dark:prose-invert max-w-none mt-10">
+    <!-- Tailwind note box -->
+
+    <h3> 
+      <span class="text-blue-500"> Note : </span> The element you choose for the handle in your UI, you need to add the following event listeners. </h3>
+
+      <ul>
+        <li>@mousedown="onHandleMouseDown"</li>
+        <li>@touchstart="onHandleMouseDown</li>
+        <li>@touchmove="onHandleTouchMove" </li>
+        <li>@touchend="onHandleTouchEnd"</li>
+      </ul>
+     
+
+
     </div>
 
-    </BraveDraggable>`}}</template>
-</BrTaSyntaxHighlighter>  
             </div>
           </li>
 
