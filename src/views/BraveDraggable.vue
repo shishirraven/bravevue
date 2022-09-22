@@ -27,6 +27,7 @@
             <div class="p-5">
                 <p class="text-gray-500 dark:text-white text-sm">
                     Hey, I am a Brave Draggable. Try to use the Title bar in this window to drag me arround.
+                    
                 </p>
             </div>
             <!-- Buttons -->
@@ -66,7 +67,15 @@
 
             </p>
             <p>
-              See the Demo at the Top Right Corner of the screen. 
+              
+          <div class="mt-10">
+            <!-- tailwind button -->
+            <button type="button" @click="config.visible = !config.visible" class="text-gray-900 bg-white border border-gray-300 focus:outline-none
+            hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1 dark:bg-indigo-900
+            dark:text-white dark:border-indigo-100 dark:hover:bg-indigo-700 dark:hover:border-indigo-600
+            dark:focus:ring-gray-700"> 
+                {{config.visible ? 'Hide' : 'Show'}} live demo Modal </button>
+          </div>
             </p>
           </div>
           
@@ -75,6 +84,7 @@
         <div class="">
             <img src="@/assets/gif/vue_draggable_demo.gif" alt="">
           </div>
+
 
         
 
@@ -283,6 +293,7 @@ export default {
       <div class="prose dark:prose-invert max-w-none">
             <h2>Options</h2>
 
+              <div class="overflow-x-auto">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="bg-gray-50 dark:bg-gray-700">
                   <tr class="text-xs font-medium uppercase">
@@ -440,6 +451,7 @@ export default {
             
         </tbody>
     </table>
+  </div>
 </div>
       <hr class="my-5" />
     </div>
