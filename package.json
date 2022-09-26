@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.2",
-    "bravevue": "^0.2.20",
+    "bravevue": "file:../bravevue_npm",
+    "i": "^0.3.7",
     "uuid": "^8.3.2",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15",

@@ -1,11 +1,14 @@
 <template>
       <BraveTabs ref="bravetabref" 
         class="text-black dark:text-white my-10"
+        tabs-wrapper-class="flex items-center"
         tabs-content-class="border  p-10 dark:bg-slate-800"
         tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
         tab-button-active-class="shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
         v-bind:tabs="['upload','filemanager']" 
         initialTab="upload">
+        <template #before-tab> <div class="px-2"><img class="h-7 w-auto" src="@/assets/images/logo.svg" alt="BraveVue" /></div> </template>
+        <template #after-tab><div class="px-2 grow text-right"><div class="inline-block">Help</div></div></template>
       <!-- ================================================================ -->
       <!-- SETTINGS PANEL  -->
       <!-- ================================================================ -->

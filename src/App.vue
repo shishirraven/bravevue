@@ -20,7 +20,7 @@ export default{
       <div class="p-2  cursor-pointer text-2xl absolute right-0 top-0 md:hidden" @click="closeMenu()"><i class=" bi bi-x-circle"></i></div>
            <router-link to="/">
          <div class="flex-shrink-0 flex items-center p-8">
-            <img class="h-7 w-auto" src="@/assets/images/logo.svg" alt="Workflow" />
+            <img class="h-7 w-auto" src="@/assets/images/logo.svg" alt="BraveVue" />
             <div class="ml-2 text-lg">BraveVue</div>    
         </div>
             </router-link>
