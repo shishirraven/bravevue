@@ -30,9 +30,6 @@
     
       </template>
 </BraveTabs>
-
-
-
 </template>
 <script>
 import { BraveTabs } from "bravevue";
