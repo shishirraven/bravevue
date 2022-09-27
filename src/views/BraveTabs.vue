@@ -75,46 +75,52 @@
               <template #tab-panel-code>
                   <BrTaSyntaxHighlighter language="javascript">
                       <template #title>PositionDialog.vue</template>
-                      <template #code>{{`<template>
-      <BraveTabs ref="bravetabref" 
-        class="text-black dark:text-white my-10"
-        tabs-wrapper-class="flex items-center"
-        tabs-content-class="border  p-10 dark:bg-slate-800"
-        tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
-        tab-button-active-class="shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
-        v-bind:tabs="['upload','filemanager']" 
-        initialTab="upload">
-        <template #before-tab> <div class="px-2"><img class="h-7 w-auto" src="@/assets/images/logo.svg" alt="BraveVue" /></div> </template>
-        <template #after-tab><div class="px-2 grow text-right"><div class="inline-block">Help</div></div></template>
-      <!-- ================================================================ -->
-      <!-- SETTINGS PANEL  -->
-      <!-- ================================================================ -->
-      <template #tab-head-upload>Upload</template>
-      <template #tab-panel-upload>
-        <h1 class="text-3xl mb-5">Content for Upload Panel</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
-      </template>
-
-
-      <!-- ================================================================ -->
-      <!-- SETTINGS PANEL  -->
-      <!-- ================================================================ -->
-
-      <template #tab-head-filemanager>File Manager</template>
-      <template #tab-panel-filemanager>
-         <h1 class="text-3xl mb-5">File Manager Content</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
-    
-      </template>
-</BraveTabs>
+                      <template #code>{{`
+                      <template>
+  <div class="py-3">
+  v-model : \{\{count\}\}
+<div class="flex items-center2">
+  <BraveNumberInput v-model="count" class="flex items-center" inputClass="ring-offset-2 focus:ring-4 text-indigo-600 bg-indigo-100 z-10 relative h-14 w-14 rounded-full text-center">
+  <template #minus-button="{decreaseNumber}">
+    <button tabindex="-1" class=" 
+     bg-indigo-400 hover:bg-indigo-500 rounded-l-full p-3 -mr-6 w-20  h-full" @click="decreaseNumber()">
+       <!--minus icon  -->
+       <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" 
+       fill="currentColor" class="bi bi-dash-circle fill-white block mr-1" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+      </svg>
+        
+     </button>
+  </template>
+  <template #plus-button="{increaseNumber}">
+    <button tabindex="-1" 
+    class="bg-indigo-400 hover:bg-indigo-600    rounded-r-full h-full p-3 -ml-6 w-20 z-1" @click="increaseNumber()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" 
+    class="fill-white bi bi-plus-circle block float-right mr-1 " viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+    </button>
+  </template>
+</BraveNumberInput>
+</div>
+</div>
 </template>
 <script>
-import { BraveTabs } from "bravevue";
-export default {
-  components: { BraveTabs },
-};
-</script>
-`}}
+
+import {BraveNumberInput} from "bravevue";
+export default{
+  data: function() {
+    return {
+      count: 100
+    }
+  },
+  components: {
+    BraveNumberInput
+  },
+}
+</script>`}}
                       </template>
                   </BrTaSyntaxHighlighter>
               </template>
@@ -163,6 +169,7 @@ export default {
                   <td class="py-4 px-6">String</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
+                    <p>CSS Classes that you need on the tab buttons</p>
                   </td>
               </tr>
               <tr>
@@ -170,6 +177,7 @@ export default {
                   <td class="py-4 px-6">String</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
+                    <p>CSS Classs that you need on the tab button is active</p>
                   </td>
               </tr>
               <tr>
@@ -177,6 +185,7 @@ export default {
                   <td class="py-4 px-6">String</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
+                    <p>CSS Classes for the wrapper on the area where tab contents are displayed.</p>
                   </td>
               </tr>
               <tr>
@@ -184,6 +193,7 @@ export default {
                   <td class="py-4 px-6">String</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
+                    <p>Set the classes you need on the wrapper div in which all tab buttons are displayed.</p>
                   </td>
               </tr>
           </table>
@@ -209,15 +219,20 @@ export default {
               <tr>
                   <td class="py-4 px-6">after-tab</td>
                   <td class="py-4 px-6">
+                    No
                   </td>
                   <td class="py-4 px-6">
+                    <p>Slot to add content after the tab buttons</p>
                   </td>
               </tr>
               <tr>
                   <td class="py-4 px-6">before-tab</td>
                   <td class="py-4 px-6">
-                  </td>
+                    No
+                </td>
                   <td class="py-4 px-6">
+                    
+                    <p>Slot to add content before the tab buttons </p>
                   </td>
               </tr>
           </table>

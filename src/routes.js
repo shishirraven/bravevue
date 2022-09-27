@@ -11,7 +11,9 @@ import BraveTabs from "./views/BraveTabs.vue";
 import BraveSlider from "./views/BraveSlider.vue";
 import BraveSyntaxHighlighter from "./views/BraveSyntaxHighLighter.vue";
 import BraveDraggable from "./views/BraveDraggable.vue";
+import BraveNumberInput from "./views/BraveNumberInput.vue";
 import RequestAComponent from "./views/RequestAComponent.vue";
+
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -25,6 +27,7 @@ export const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import("./views/BraveSidebarLayout.vue"),
   },
+
   {
     path: "/brave_draggable",
     meta: { title: "Brave Draggable" },
@@ -33,6 +36,15 @@ export const routes = [
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import("./views/BraveDraggable.vue"),
+  },
+  {
+    path: "/brave_number_input",
+    meta: { title: "Brave Draggable" },
+    //component: BraveNumberInput,
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("./views/BraveNumberInput.vue"),
   },
   {
     path: "/brave_syntax_highlighter",

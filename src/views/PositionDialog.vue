@@ -15,7 +15,7 @@
         <h2 class="text-2xl font-semibold my-10">Examples</h2>
 
 
-      <BraveTabs ref="bravetabref" 
+      <BrTaTabs ref="bravetabref" 
         class="text-black dark:text-white my-10"
         tabs-content-class="border  p-4 dark:bg-slate-800"
         tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
@@ -82,10 +82,10 @@ export default {
 `}} </template>
                 </BrTaSyntaxHighlighter>
       </template>
-</BraveTabs>
+</BrTaTabs>
 
 
-      <BraveTabs ref="bravetabref3" 
+      <BrTaTabs ref="bravetabref3" 
         class="text-black dark:text-white my-10"
         tabs-content-class="border  p-4 dark:bg-slate-800"
         tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
@@ -158,9 +158,9 @@ export default {
 `}} </template>
                 </BrTaSyntaxHighlighter>
       </template>
-</BraveTabs>
+</BrTaTabs>
 
-      <BraveTabs ref="bravetabref2" 
+      <BrTaTabs ref="bravetabref2" 
         class="text-black dark:text-white my-10"
         tabs-content-class="border  p-4 dark:bg-slate-800"
         tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
@@ -238,7 +238,7 @@ export default {
 `}} </template>
                 </BrTaSyntaxHighlighter>
       </template>
-</BraveTabs>
+</BrTaTabs>
 
 
 
@@ -263,8 +263,9 @@ import PositionDialogExampleVue from "@/components/uiexamples/PositionDialogExam
 import PositionDialogExampleOnClick from "@/components/uiexamples/PositionDialogExampleOnClick.vue";
 import PositionDialogContextMenu from "@/components/uiexamples/PositionDialogContextMenu.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
-import { BraveGistEmbed,BraveTabs } from "bravevue";
+import { BraveGistEmbed } from "bravevue";
+import BrTaTabs  from "@/components/brave_tailwind/BrTaTabs.vue";
 export default {
-  components: {  BraveGistEmbed, PositionDialogExampleVue,BraveTabs ,BrTaSyntaxHighlighter,PositionDialogExampleOnClick,PositionDialogContextMenu},  
+  components: {  BraveGistEmbed, PositionDialogExampleVue,BrTaTabs ,BrTaSyntaxHighlighter,PositionDialogExampleOnClick,PositionDialogContextMenu},  
 };
 </script>
