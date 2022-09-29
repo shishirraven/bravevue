@@ -8,10 +8,11 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.2",
-    "bravevue": "^0.2.22",
+    "bravevue": "file:../bravevue_npm",
     "i": "^0.3.7",
     "uuid": "^8.3.2",
-    "vue": "^3.2.33",
+    "vite": "^3.1.4",
+    "vue": "^3.2.40",
     "vue-router": "^4.0.15",
     "vuedraggable": "^4.1.0"
   },
@@ -24,7 +25,6 @@
     "@vitejs/plugin-vue": "^2.3.2",
     "autoprefixer": "^10.4.7",
     "prettier-plugin-tailwindcss": "^0.1.10",
-    "tailwindcss": "^3.0.24",
-    "vite": "^2.9.8"
+    "tailwindcss": "^3.0.24"
   }
 }

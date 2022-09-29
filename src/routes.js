@@ -10,8 +10,8 @@ import BraveSelect from "./views/BraveSelect.vue";
 import BraveTabs from "./views/BraveTabs.vue";
 import BraveSlider from "./views/BraveSlider.vue";
 import BraveSyntaxHighlighter from "./views/BraveSyntaxHighLighter.vue";
-import BraveDraggable from "./views/BraveDraggable.vue";
-import BraveNumberInput from "./views/BraveNumberInput.vue";
+//import BraveDraggable from "./views/BraveDraggable.vue";
+//import BraveNumberInput from "./views/BraveNumberInput.vue";
 import RequestAComponent from "./views/RequestAComponent.vue";
 
 
@@ -26,6 +26,16 @@ export const routes = [
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import("./views/BraveSidebarLayout.vue"),
+  },
+
+  {
+    path: "/brave_radial_menu",
+    meta: { title: "Brave Radial Menu" },
+    //component: BraveSidebarLayout,
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("./views/BraveRadialMenu.vue"),
   },
 
   {

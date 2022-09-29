@@ -51,76 +51,125 @@
               </ul>
           </div>
       </div>
-      <div class="prose dark:prose-invert prose-slate  ">
-          <h1 id="brave-tabs flex items-center"><i class="bi bi-segmented-nav"></i> Brave Tabs</h1>
-          <p>Show Options from your Data and save the result through v-model. The following is an brave tabs in
-              action.</p>
+      <div class="prose dark:prose-invert prose-slate ">
+          <h1 id="brave-tabs"><i class="bi bi-brightness-low"></i> Brave Radial Menu</h1>
+          <img class="" src="@/assets/gif/radial_menu_vue.gif" alt="radial menu demo">
 
-          <h2 id="brave-select-diff">How is Brave Select Different</h2>
-          <h3 id="object-for-options">Brave Select uses an Array of Objects for Options</h3>
-          <p>Brave Select is designed to loop an array of objects. which means you can use the objects properties on on the Selected Value and also the options.</p>
-          <p>A common use case would be if you are using an icon along with the text. This would be helpful to show the icon along with the text.</p>
+          <p>Radial Menu displays a list of items in a circular design with option to print text.</p>
 
-          <h3 id="super-flexible">Super flexible templates</h3>
-          <p>You can customize the templates in whatever way you want and can use properties of the object how ever you like.</p>
-
+          <h2>Features</h2>
+          <ul>
+            <li>Style-less, Style as you like</li>
+            <li>Customizable Radius of the Menu</li>
+            <li>Customizable Radius of the Options and padding from perimeter</li>
+            <li>Can use as Context Menu.</li>
+          </ul>
 
         <h3 id="live-example">Live Example</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code']" initialTab="example">
               <template #tab-head-example>Basic Example</template>
               <template #tab-panel-example>
-                  <BraveTabs />
+                  <BraveRadialMenu />
               </template>
               <template #tab-head-code>Source Code</template>
               <template #tab-panel-code>
                   <BrTaSyntaxHighlighter language="javascript">
                       <template #title>PositionDialog.vue</template>
-                      <template #code>{{`
-                      <template>
-  <div class="py-3">
-  v-model : \{\{count\}\}
-<div class="flex items-center2">
-  <BraveNumberInput v-model="count" class="flex items-center" inputClass="ring-offset-2 focus:ring-4 text-indigo-600 bg-indigo-100 z-10 relative h-14 w-14 rounded-full text-center">
-  <template #minus-button="{decreaseNumber}">
-    <button tabindex="-1" class=" 
-     bg-indigo-400 hover:bg-indigo-500 rounded-l-full p-3 -mr-6 w-20  h-full" @click="decreaseNumber()">
-       <!--minus icon  -->
-       <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" 
-       fill="currentColor" class="bi bi-dash-circle fill-white block mr-1" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                      <template #code>{{`<template>
+  <BraveRadialMenu ref="BraveradialMenu2" class="shishir" :class="config.class" :radius="config.radius"
+    :radius-icons="config.radiusIcons" :circle-padding="config.circlePadding" :visible="config.visible"
+    :classBackdrop="config.classBackdrop" @show="config.visible=true" @hide="config.visible=false">
+
+    <!-- CENTER MORE BUTTON -->
+    <div @click.stop="$refs.BraveradialMenu2.hide()" title="More" class="overflow-clip  cursor-pointer z-50
+           transition-all flex justify-center border
+            border-slate-300 scale-125 hover:scale-150 items-center">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
-        
-     </button>
-  </template>
-  <template #plus-button="{increaseNumber}">
-    <button tabindex="-1" 
-    class="bg-indigo-400 hover:bg-indigo-600    rounded-r-full h-full p-3 -ml-6 w-20 z-1" @click="increaseNumber()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" 
-    class="fill-white bi bi-plus-circle block float-right mr-1 " viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-</svg>
-    </button>
-  </template>
-</BraveNumberInput>
-</div>
-</div>
+    </div>
+
+    <!-- ALL OTHER BUTTONS -->
+    <a v-for="(item,index) in items" :key="index" :href="item.href" :title="item.title" class="overflow-clip p-3 transition-all flex justify-center  hover:scale-110
+           items-center border-gray-100 borders">
+      <img class="w-full h-full object-cover" :src="item.src" :alt="item.title" />
+    </a>
+  </BraveRadialMenu>
+
+  <!-- CLICKABLE AREA ATO SHOW RADIAL MENU AS CONTEXT -->
+  <div class="h-96 bg-white flex items-center justify-center " @click="$refs.BraveradialMenu2.show($event)">
+    <div class="text-gray-500 text-lg font-bold">
+      Click anywhere on the white area to show the radial menu
+    </div>
+  </div>
+
 </template>
 <script>
-
-import {BraveNumberInput} from "bravevue";
-export default{
-  data: function() {
+import { BraveRadialMenu } from "bravevue";
+export default {
+  name: "AppVue",
+  data() {
     return {
-      count: 100
+      config: {
+        radius: 150,
+        radiusIcons: 30,
+        circlePadding: 30,
+        visible: false,
+        classBackdrop: 'back-drop transition-all backdrop-blur-sm2',
+        class: "border transition-all shadow white font-mono uppercase font-thin text-gray-900 text-sm bg-white/90 backdrop-blur"
+      },
+      items: [
+        {
+          "title": "Flooring",
+          "src": '/assets/flooring.svg',
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Paint",
+          "src": "/assets/paint.svg",
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Backsplash",
+          "src": "/assets/backsplash.svg",
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Countertop",
+          "src": "/assets/countertop-icon.svg",
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Cabinet",
+          "src": "/assets/cabinet.svg",
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Hardware",
+          "src": "/assets/knob.svg",
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Faucet",
+          "src": "/assets/faucet.svg",
+          "href": "http://www.iamshishir.com"
+        },
+        {
+          "title": "Appliances",
+          "src": "/assets/appliance.svg",
+          "href": "http://www.iamshishir.com"
+        }
+      ],
     }
   },
+
   components: {
-    BraveNumberInput
-  },
+    BraveRadialMenu,
+  }
+
 }
-</script>`}}
+</script>
+  `}}
                       </template>
                   </BrTaSyntaxHighlighter>
               </template>
@@ -143,60 +192,67 @@ export default{
                   </tr>
               </thead>
               <tr>
-                  <td class="py-4 px-6">tabs</td>
-                  <td class="py-4 px-6">Array</td>
+                  <td class="py-4 px-6">radius</td>
+                  <td class="py-4 px-6">Number</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
-                      <p>Array of the name-slug of tabs to be displayed </p>
+                      <p>Outer Radius of the Radial Menu </p>
                       <p>
-                        Example : <code class="text-blue-500" >['tab1','tab2']</code>
+                        Example : <code class="text-blue-500" >150</code>
                       </p>
                   </td>
               </tr>
               <tr>
-                  <td class="py-4 px-6">initialTab</td>
-                  <td class="py-4 px-6">String</td>
+                  <td class="py-4 px-6">radiusIcons</td>
+                  <td class="py-4 px-6">Number</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
-                      <p>Name of the tab that should be currently displayed.</p>
+                      <p>Radius of the Individual Menu Items</p>
                       <p>
-                        Example : <code class="text-blue-500" >initialTab="upload"</code>
+                        Example : <code class="text-blue-500" >35</code>
                       </p>
                   </td>
               </tr>
               <tr>
-                  <td class="py-4 px-6">tabButtonClass</td>
-                  <td class="py-4 px-6">String</td>
+                  <td class="py-4 px-6">circlePadding</td>
+                  <td class="py-4 px-6">Number</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
-                    <p>CSS Classes that you need on the tab buttons</p>
+                    <p>Padding between the Circumference of the Menu and Menu Items</p>
                   </td>
               </tr>
               <tr>
-                  <td class="py-4 px-6">tabButtonActiveClass</td>
-                  <td class="py-4 px-6">String</td>
+                  <td class="py-4 px-6">visible</td>
+                  <td class="py-4 px-6">Boolean</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
-                    <p>CSS Classs that you need on the tab button is active</p>
+                    <p>Visiblity of the Menu</p>
                   </td>
               </tr>
               <tr>
-                  <td class="py-4 px-6">tabsContentClass</td>
+                  <td class="py-4 px-6">classBackdrop</td>
                   <td class="py-4 px-6">String</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
-                    <p>CSS Classes for the wrapper on the area where tab contents are displayed.</p>
+                    <p>CSS Classes for the backdrop that convers the screen when menu is open</p>
                   </td>
               </tr>
+              
               <tr>
-                  <td class="py-4 px-6">tabsWrapperClass</td>
+                  <td class="py-4 px-6">class</td>
                   <td class="py-4 px-6">String</td>
                   <td class="py-4 px-6"></td>
                   <td class="py-4 px-6">
-                    <p>Set the classes you need on the wrapper div in which all tab buttons are displayed.</p>
+                    <p>CSS Classes that will be applied to the Menu</p>
                   </td>
               </tr>
           </table>
+
+          <!-- important note -->
+          <div class="border p-3">
+            <p><b>Important note:</b> for best results use monospaced font.</p>
+          </div>
+
           <h2 class="mt-30" id="slots">
               Slots
               <a href="#slots" name="slots" class="anchor">
@@ -217,22 +273,14 @@ export default{
                   </td>
               </tr>
               <tr>
-                  <td class="py-4 px-6">after-tab</td>
+                  <td class="py-4 px-6">default</td>
                   <td class="py-4 px-6">
                     No
                   </td>
                   <td class="py-4 px-6">
-                    <p>Slot to add content after the tab buttons</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td class="py-4 px-6">before-tab</td>
-                  <td class="py-4 px-6">
-                    No
-                </td>
-                  <td class="py-4 px-6">
-                    
-                    <p>Slot to add content before the tab buttons </p>
+                    <p>
+                        This slot is used to render the Menu Items. All the child items of this slot will be treated as menu items. 
+                    </p>
                   </td>
               </tr>
           </table>
@@ -240,18 +288,18 @@ export default{
   </main>
 </template>
 <script>
+import BraveRadialMenu from "@/components/uiexamples/BrRadialMenu.vue";
 import BraveTabs from "@/components/uiexamples/BraveTabs.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed } from "bravevue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
-import BraveRadialMenu from "@/components/uiexamples/BrRadialMenu.vue";
 export default {
   components: {
-      BraveRadialMenu,
       BraveGistEmbed,
       BraveTabs,
       BrTaSyntaxHighlighter,
       BrTaTabs,
+      BraveRadialMenu
   },
 };
 </script>
