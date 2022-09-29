@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.2",
-    "bravevue": "file:../bravevue_npm",
-    "i": "^0.3.7",
+    "bravevue": "^0.2.23",
     "uuid": "^8.3.2",
     "vite": "^3.1.4",
     "vue": "^3.2.40",
@@ -22,7 +21,7 @@
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/tailwindcss": "^3.0.10",
-    "@vitejs/plugin-vue": "^2.3.2",
+    "@vitejs/plugin-vue": "^3.1.0",
     "autoprefixer": "^10.4.7",
     "prettier-plugin-tailwindcss": "^0.1.10",
     "tailwindcss": "^3.0.24"
