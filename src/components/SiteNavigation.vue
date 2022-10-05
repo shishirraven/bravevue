@@ -1,6 +1,7 @@
 <template>
 <div class="  text-white flex flex-col space2-y-5 font-light">
     
+
     <router-link @click.native="$emit('jumpingToAnchor')"  to="/" class="flex items-center p-3 ">
         <i class="bi text-xl bi-house me-2
         dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
@@ -8,6 +9,16 @@
         <div class="ml-2 ">Home </div>
     </router-link>
     <div class="text-sm tracking-wider py-4">COMPONENTS</div>
+
+
+    
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_tabs" class="flex items-center p-3 ">
+        <i class="bi bi-segmented-nav  
+        dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Brave Tabs </div>
+    </router-link>  
+    
      <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_draggable"  class="flex items-center p-3 ">
         <i class="bi me-2 text-xl  bi-arrows-move
         dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
@@ -83,12 +94,6 @@
         <div class="ml-2">Select </div>
     </router-link>   
     
-    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_tabs" class="flex items-center p-3 ">
-        <i class="bi bi-segmented-nav  
-        dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
-        from-yellow-100 via-yellow-300 to-yellow-500"></i>
-        <div class="ml-2">Brave Tabs </div>
-    </router-link>  
     
    
 

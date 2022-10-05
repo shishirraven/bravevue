@@ -7,36 +7,28 @@
           </h5>
           <div id="navigation">
               <ul class="navtext-slate-700 text-sm leading-6">
+                
                   <li class>
                       <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                          href="#brave-select-diff">How is Brave Select Different</a>
+                          href="#introduction">Introduction</a>
+                  </li>
+                  <li class>
+                      <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                          href="#features">Features</a>
+                  </li>
+                  
+                  <li class>
+                      <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                          href="#examples">Examples</a>
                       <ul class="nav">
                           <li class="ml-4">
                               <a class="group flex items-center py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                  href="#object-for-options">
+                                  href="#basic-example">
                                   <svg width="3" height="24" viewbox="0 -9 3 24"
                                       class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
                                       <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
                                           stroke-linecap="round"></path>
-                                  </svg>Brave Select uses an Array of Objects for Options</a>
-                          </li>
-                          <li class="ml-4">
-                              <a class="group flex items-center py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                  href="#super-flexible">
-                                  <svg width="3" height="24" viewbox="0 -9 3 24"
-                                      class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
-                                      <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
-                                          stroke-linecap="round"></path>
-                                  </svg>Super flexible templates</a>
-                          </li>
-                          <li class="ml-4">
-                              <a class="group flex items-center py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                  href="#live-example">
-                                  <svg width="3" height="24" viewbox="0 -9 3 24"
-                                      class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
-                                      <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
-                                          stroke-linecap="round"></path>
-                                  </svg>Live Example</a>
+                                  </svg>Basic Example</a>
                           </li>
                       </ul>
                   </li>
@@ -52,12 +44,12 @@
           </div>
       </div>
       <div class="prose dark:prose-invert prose-slate ">
-          <h1 id="brave-tabs"><i class="bi bi-brightness-low"></i> Brave Radial Menu</h1>
+          <h1 id="introduction"><i class="bi bi-brightness-low"></i> Brave Radial Menu</h1>
+          <p>Radial Menu displays a list of items in a circular design with option to print text.</p>
           <img class="" src="@/assets/gif/radial_menu_vue.gif" alt="radial menu demo">
 
-          <p>Radial Menu displays a list of items in a circular design with option to print text.</p>
 
-          <h2>Features</h2>
+          <h2 id="features">Features</h2>
           <ul>
             <li>Style-less, Style as you like</li>
             <li>Customizable Radius of the Menu</li>
@@ -65,7 +57,9 @@
             <li>Can use as Context Menu.</li>
           </ul>
 
-        <h3 id="live-example">Live Example</h3>
+          <h2 id="examples">Examples</h2>
+
+        <h3 id="basic-example">Live Example</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code']" initialTab="example">
               <template #tab-head-example>Basic Example</template>
               <template #tab-panel-example>

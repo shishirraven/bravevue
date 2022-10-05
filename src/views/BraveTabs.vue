@@ -7,39 +7,23 @@
           </h5>
           <div id="navigation">
               <ul class="navtext-slate-700 text-sm leading-6">
-                  <li class>
-                      <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                          href="#brave-select-diff">How is Brave Select Different</a>
-                      <ul class="nav">
-                          <li class="ml-4">
-                              <a class="group flex items-center py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                  href="#object-for-options">
-                                  <svg width="3" height="24" viewbox="0 -9 3 24"
-                                      class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
-                                      <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
-                                          stroke-linecap="round"></path>
-                                  </svg>Brave Select uses an Array of Objects for Options</a>
-                          </li>
-                          <li class="ml-4">
-                              <a class="group flex items-center py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                  href="#super-flexible">
-                                  <svg width="3" height="24" viewbox="0 -9 3 24"
-                                      class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
-                                      <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
-                                          stroke-linecap="round"></path>
-                                  </svg>Super flexible templates</a>
-                          </li>
-                          <li class="ml-4">
-                              <a class="group flex items-center py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                  href="#live-example">
-                                  <svg width="3" height="24" viewbox="0 -9 3 24"
-                                      class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
-                                      <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
-                                          stroke-linecap="round"></path>
-                                  </svg>Live Example</a>
-                          </li>
-                      </ul>
-                  </li>
+                    <li class="mb-2">
+                        <a href="#introduction" class="text-slate-900 dark:text-slate-100">
+                            Introduction
+                        </a>
+                    </li>
+                    <!-- live example -->
+                    <li class="mb-2">
+                        <a href="#live-example" class="text-slate-900 dark:text-slate-100">
+                            Live example
+                        </a>
+                    </li>
+                    <!-- tailwindCSS styled pills example -->
+                    <li class="mb-2">
+                        <a href="#tailwindcss-styled-pills-example" class="text-slate-900 dark:text-slate-100">
+                            Pills Styled example with Tailwind CSS
+                        </a>
+                    </li>
                   <li class>
                       <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                           href="#props">Props</a>
@@ -52,19 +36,8 @@
           </div>
       </div>
       <div class="prose dark:prose-invert prose-slate  ">
-          <h1 id="brave-tabs flex items-center"><i class="bi bi-segmented-nav"></i> Brave Tabs</h1>
-          <p>Show Options from your Data and save the result through v-model. The following is an brave tabs in
-              action.</p>
-
-          <h2 id="brave-select-diff">How is Brave Select Different</h2>
-          <h3 id="object-for-options">Brave Select uses an Array of Objects for Options</h3>
-          <p>Brave Select is designed to loop an array of objects. which means you can use the objects properties on on the Selected Value and also the options.</p>
-          <p>A common use case would be if you are using an icon along with the text. This would be helpful to show the icon along with the text.</p>
-
-          <h3 id="super-flexible">Super flexible templates</h3>
-          <p>You can customize the templates in whatever way you want and can use properties of the object how ever you like.</p>
-
-
+          <h1 id="introduction"><i class="bi bi-segmented-nav"></i> Brave Tabs</h1>
+            <p>Brave Tabs is a Vue 3 component that allows you to create tabs with a simple and easy to use API.</p>
         <h3 id="live-example">Live Example</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code']" initialTab="example">
               <template #tab-head-example>Basic Example</template>
@@ -74,52 +47,187 @@
               <template #tab-head-code>Source Code</template>
               <template #tab-panel-code>
                   <BrTaSyntaxHighlighter language="javascript">
-                      <template #title>PositionDialog.vue</template>
-                      <template #code>{{`
-                      <template>
-  <div class="py-3">
-  v-model : \{\{count\}\}
-<div class="flex items-center2">
-  <BraveNumberInput v-model="count" class="flex items-center" inputClass="ring-offset-2 focus:ring-4 text-indigo-600 bg-indigo-100 z-10 relative h-14 w-14 rounded-full text-center">
-  <template #minus-button="{decreaseNumber}">
-    <button tabindex="-1" class=" 
-     bg-indigo-400 hover:bg-indigo-500 rounded-l-full p-3 -mr-6 w-20  h-full" @click="decreaseNumber()">
-       <!--minus icon  -->
-       <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" 
-       fill="currentColor" class="bi bi-dash-circle fill-white block mr-1" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-      </svg>
-        
-     </button>
-  </template>
-  <template #plus-button="{increaseNumber}">
-    <button tabindex="-1" 
-    class="bg-indigo-400 hover:bg-indigo-600    rounded-r-full h-full p-3 -ml-6 w-20 z-1" @click="increaseNumber()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" 
-    class="fill-white bi bi-plus-circle block float-right mr-1 " viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-</svg>
-    </button>
-  </template>
-</BraveNumberInput>
-</div>
-</div>
+                      <template #title>BraveTabsExample.vue</template>
+                      <template #code>{{`<template>
+  <BraveTabs ref="bravetabref" class="text-black dark:text-white my-10" tabs-wrapper-class="flex items-center"
+    tabs-content-class="border  p-10 dark:bg-slate-800"
+    tab-button-class="px-4 py-2 mr-px cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
+    tab-button-active-class="px-4 py-2 mr-px shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
+    v-bind:tabs="['mobile','appliances','computers','gaming']" initialTab="mobile">
+    <template #before-tab>
+      <div class="px-2"><img class="h-7 w-auto" src="@/assets/images/logo.svg" alt="BraveVue" /></div>
+    </template>
+    <template #after-tab>
+      <div class="px-2 grow text-right">
+        <div class="inline-block">Help</div>
+      </div>
+    </template>
+    <!-- ================================================================ -->
+    <!-- SETTINGS PANEL  -->
+    <!-- ================================================================ -->
+    <template #tab-head-mobile>Mobile</template>
+    <template #tab-panel-mobile>
+      <h1 class="text-3xl mb-5">Content for mobile Panel</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
+        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
+    </template>
+
+    <!-- Appliance Panel -->
+
+    <template #tab-head-appliances>Appliances</template>
+    <template #tab-panel-appliances>
+      <h1 class="text-3xl mb-5">Content for Appliances Panel</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
+        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
+    </template>
+
+    <!-- Computer Panel -->
+
+    <template #tab-head-computers>💻 Computers</template>
+    <template #tab-panel-computers>
+      <h1 class="text-3xl mb-5">Content for Computers Panel</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
+        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
+    </template>
+
+    <!-- Gaming Panel -->
+
+    <template #tab-head-gaming> Gaming</template>
+    <template #tab-panel-gaming>
+      <h1 class="text-3xl mb-5">Content for Gaming Panel</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
+        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
+    </template>
+  </BraveTabs>
 </template>
 <script>
+import { BraveTabs } from "bravevue";
+export default {
+  components: { BraveTabs },
+};
+</script>
+`}}
+                      </template>
+                  </BrTaSyntaxHighlighter>
+              </template>
+          </BrTaTabs>
 
-import {BraveNumberInput} from "bravevue";
-export default{
-  data: function() {
-    return {
-      count: 100
-    }
-  },
-  components: {
-    BraveNumberInput
-  },
-}
+
+          <h3 id="tailwindcss-styled-pills-example">Pills Tab Style with Tailwind CSS</h3>
+          <BrTaTabs class="not-prose" v-bind:tabs="['example','code','stackblitz']" initialTab="example">
+            <!-- Links to StackBlitz -->
+            <template #after-tab>
+                <div class="text-right grow ">
+                  
+                </div>
+              </template>
+
+
+              <template #tab-head-stackblitz>⚡StackBlitz</template>
+              <template #tab-panel-stackblitz>
+                <!-- tailwind iframe full width and height -->
+                <iframe src="https://stackblitz.com/edit/vitejs-vite-truwea?embed=1&file=src/components/HorizontalPillTabs.vue&hideNavigation=1&view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" allowfullscreen="allowfullscreen" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+              </template>
+
+
+              <template #tab-head-example>Pills Styled Example</template>
+              <template #tab-panel-example>
+                  <PillsTab />
+              </template>
+              <template #tab-head-code>Source Code</template>
+              <template #tab-panel-code>
+                  <BrTaSyntaxHighlighter language="javascript">
+                      <template #title>PositionDialog.vue</template>
+                      <template #code>{{`<template>
+    <BraveTabs ref="bravetabref" class="overflow-hidden dark:bg-slate-900 p-5"
+        tabsWrapperClass="flex mx-auto max-w-min bg-slate-200 dark:bg-slate-800 p-1 rounded-xl"
+        tab-button-class="rounded-xl px-10 sm:px-10 py-2 dark:text-slate-400 whitespace-nowrap cursor-pointer text-center duration-200"
+        tab-button-active-class="px-10 sm:px-10 rounded-xl bg-slate-900 dark:bg-slate-900 text-white whitespace-nowrap py-2 cursor-pointer text-center duration-200 shadow-md"
+        tabs-content-class="mt-5 rounded-lg border dark:border-slate-800 py-7 px-7 dark:text-white"
+        v-bind:tabs="['a', 'b', 'c']" initialTab="a">
+
+
+        <!-- ================================================================ -->
+        <!-- TAB-A: HEAD & CONTENT PANEL  -->
+        <!-- ================================================================ -->
+
+        <!-- TAB-A: HEAD PANEL  -->
+        <template #tab-head-a>
+            <span class="uppercase">Mobile</span>
+        </template>
+
+        <!-- TAB-A: CONTENT PANEL  -->
+        <template #tab-panel-a>
+            <div class="text-2xl font-bold mb-5 text-center uppercase">
+                Mobile Tab Panel
+            </div>
+            <div class="columns-1 sm:columns-2 text-center sm:text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa
+                itaque quam rerum recusandae eum adipisci inventore deserunt, reiciendis
+                dolorum autem sapiente similique non, architecto porro maxime blanditiis
+                obcaecati vero aperiam nesciunt. Eius provident delectus ea est ratione
+                ducimus architecto eligendi. Eius, deleniti molestias? Repudiandae id
+                adipisci pariatur! Sapiente, dolore?
+            </div>
+        </template>
+
+        <!-- ================================================================ -->
+        <!-- TAB-B: HEAD & CONTENT PANEL  -->
+        <!-- ================================================================ -->
+
+        <!-- TAB-B: HEAD PANEL  -->
+        <template #tab-head-b>
+            <span class="uppercase">Tv</span>
+        </template>
+
+        <!-- TAB-B: CONTENT PANEL  -->
+        <template #tab-panel-b>
+            <div class="text-2xl font-bold mb-5 text-center uppercase">
+                Tv Tab Panel
+            </div>
+            <div class="columns-1 sm:columns-2 text-center sm:text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa
+                itaque quam rerum recusandae eum adipisci inventore deserunt, reiciendis
+                dolorum autem sapiente similique non, architecto porro maxime blanditiis
+                obcaecati vero aperiam nesciunt. Eius provident delectus ea est ratione
+                ducimus architecto eligendi. Eius, deleniti molestias? Repudiandae id
+                adipisci pariatur! Sapiente, dolore?
+            </div>
+        </template>
+
+        <!-- ================================================================ -->
+        <!-- TAB-C: HEAD & CONTENT PANEL  -->
+        <!-- ================================================================ -->
+
+        <!-- TAB-C: HEAD PANEL  -->
+        <template #tab-head-c>
+            <span class="uppercase">Appliances</span>
+        </template>
+
+        <!-- TAB-C: CONTENT PANEL  -->
+        <template #tab-panel-c>
+            <div class="text-2xl font-bold mb-5 text-center uppercase">
+                Appliances Tab Panel
+            </div>
+            <div class="columns-1 sm:columns-2 text-center sm:text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa
+                itaque quam rerum recusandae eum adipisci inventore deserunt, reiciendis
+                dolorum autem sapiente similique non, architecto porro maxime blanditiis
+                obcaecati vero aperiam nesciunt. Eius provident delectus ea est ratione
+                ducimus architecto eligendi. Eius, deleniti molestias? Repudiandae id
+                adipisci pariatur! Sapiente, dolore?
+            </div>
+        </template>
+    </BraveTabs>
+</template>
+  
+<script>
+import { BraveTabs } from 'bravevue';
+export default {
+    components: {
+        BraveTabs,
+    },
+};
 </script>`}}
                       </template>
                   </BrTaSyntaxHighlighter>
@@ -245,13 +353,15 @@ import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed } from "bravevue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
 import BraveRadialMenu from "@/components/uiexamples/BrRadialMenu.vue";
+import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
 export default {
   components: {
-      BraveRadialMenu,
-      BraveGistEmbed,
-      BraveTabs,
-      BrTaSyntaxHighlighter,
-      BrTaTabs,
-  },
+    BraveRadialMenu,
+    BraveGistEmbed,
+    BraveTabs,
+    BrTaSyntaxHighlighter,
+    BrTaTabs,
+    PillsTab
+},
 };
 </script>

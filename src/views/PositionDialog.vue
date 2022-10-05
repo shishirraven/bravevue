@@ -16,10 +16,6 @@
 
 
       <BrTaTabs ref="bravetabref" 
-        class="text-black dark:text-white my-10"
-        tabs-content-class="border  p-4 dark:bg-slate-800"
-        tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
-        tab-button-active-class="shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
         v-bind:tabs="['upload','filemanager']" 
         initialTab="upload">
       <!-- ================================================================ -->
@@ -86,10 +82,6 @@ export default {
 
 
       <BrTaTabs ref="bravetabref3" 
-        class="text-black dark:text-white my-10"
-        tabs-content-class="border  p-4 dark:bg-slate-800"
-        tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
-        tab-button-active-class="shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
         v-bind:tabs="['upload','filemanager']" 
         initialTab="upload">
       <!-- ================================================================ -->
@@ -161,10 +153,6 @@ export default {
 </BrTaTabs>
 
       <BrTaTabs ref="bravetabref2" 
-        class="text-black dark:text-white my-10"
-        tabs-content-class="border  p-4 dark:bg-slate-800"
-        tab-button-class="cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
-        tab-button-active-class="shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
         v-bind:tabs="['upload','filemanager']" 
         initialTab="upload">
       <!-- ================================================================ -->
