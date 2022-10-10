@@ -16,8 +16,7 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install
-        npm run prod
-    
+        npm run build
     - name: List output files
       run: find theme/ -print
       
