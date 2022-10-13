@@ -91,6 +91,6 @@ createApp(App).use(bravevue).mount("#app");
 - [Gist Embed](https://braveui.com/gistembed)
 - [Draggable](https://braveui.com/brave_draggable)
 - [Syntax Hilighter](https://braveui.com/brave_syntax_highlighter)
-- [Field](https://braveui.com/brave_field)s
+- [Field](https://braveui.com/brave_field)
 
 
