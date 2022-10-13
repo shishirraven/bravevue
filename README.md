@@ -1,3 +1,12 @@
+![image](https://user-images.githubusercontent.com/4470383/180094514-ffc1e05c-b4a1-453e-b2cd-8fbb4f8a0e4a.png)
+
+# BraveVue - Headless UI Library for Vue js (Vue 3)
+
+[![npm](https://img.shields.io/npm/dt/bravevue.svg)](https://shishirraven.github.io/bravevue/)
+[![Discord](https://img.shields.io/discord/1000586459285291018)](https://discord.gg/fvUz8M2vra)
+![GitHub](https://img.shields.io/github/license/shishirraven/bravevue)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/bravevue)
+
 ![1](https://user-images.githubusercontent.com/4470383/195583037-0d695890-4228-482d-bee4-3d735fb80ec5.png)
 
 ![2](https://user-images.githubusercontent.com/4470383/195583048-5d869b3f-4917-4258-8669-a9804faf13e3.png)
@@ -13,8 +22,9 @@
 ![image](https://user-images.githubusercontent.com/4470383/180094514-ffc1e05c-b4a1-453e-b2cd-8fbb4f8a0e4a.png)
 
 
-
 # BraveVue - Headless UI Library for Vue js (Vue 3)
+
+
 
 BraveVue JS is designed to help you break free of monotonous design and helps you build something UNIQUE & BEAUTIFUL. 
 We achieve this by giving your a Styleless Components that you can craft as you like.
@@ -25,6 +35,8 @@ BraveVue is a headless UI Library for Vue js applications.
 Components are designed to be minimilistic and non-bloated.
 BraveVue can work with any of the Popular CSS Frameworks(Tailwind, Bootstrap ...) and Custom CSS.
 
+⭐ We appreciate your star, it helps!
+
 ## Project setup
 ```
 npm i bravevue
@@ -32,6 +44,17 @@ npm i bravevue
 ```
 yarn add bravevue
 ```
+
+
+## Use through Plugin. 
+
+```
+const { createApp } = require('vue');
+import App from "./App.vue";
+import bravevue from 'bravevue'
+createApp(App).use(bravevue).mount("#app");
+```
+
 
 ## Features. 
 
@@ -47,27 +70,27 @@ yarn add bravevue
   You have control but not complete control over the design unless your drill down into CSS. 
 
 - ### Tailwind Support
-  We love Tailwind and examples coded here are in Tailwind. But you can easily use your own styling framework. 
+  We love Tailwind and examples coded are in Tailwind. But you can easily use your own styling framework. 
 
 ## Demo & Documentation
-[https://shishirraven.github.io/bravevue/](https://shishirraven.github.io/bravevue/)
+[https://braveui.com](https://braveui.com)
 
-## Available Components. 
+## Component Quick List
 
-- ### Brave Dialog. 
-  Multi-purpose Dialog that you can center on your page.
-- ### Sidebar Layout. 
-  Create a Responsive Sidebar. 
-- ### Position Dialog. 
-  Display a Context Menu, a on Hover Help Hint or a Modal Positioned where the user clicks. 
-- ### DropMenu. 
-  Use for Dropdown Navigation. 
-- ### Select 
-  Use this on your forms to work with v-model, you can pass an Object Array and use the Object elements, like Image and Heading in your dropdown. 
-- ### Brave Tabs. 
-- ### Brave Slider.
-  Simple Slider that allows you to design controls as you wish. 
-
-
+- [Tabs](https://braveui.com/brave_tabs)
+- [Tags](https://braveui.com/brave_tags)
+- [Draggable](https://braveui.com/brave_draggable)
+- [Radial Menu](https://braveui.com/brave_radial_menu)
+- [Sidebar Layout](https://braveui.com/brave_sidebar_layout)
+- [Slider](https://braveui.com/brave_slider)
+- [Dialog](https://braveui.com/bravedialog)
+- [Position Dialog](https://braveui.com/positiondialog)
+- [Number Input](https://braveui.com/brave_number_input)
+- [Dropmenu](https://braveui.com/brave_dropmenu)
+- [Select](https://braveui.com/brave_select)
+- [Gist Embed](https://braveui.com/gistembed)
+- [Draggable](https://braveui.com/brave_draggable)
+- [Syntax Hilighter](https://braveui.com/brave_syntax_highlighter)
+- [Field](https://braveui.com/brave_field)s
 
 
