@@ -1,9 +1,10 @@
 <template>
+  
 <BraveSyntaxHighlighter
                 copyText=" 📋 Copy Code"
                 :language="langauge"
-                prisimClassName="dark:!bg-slate-800 bg-slate-50 rounded-lg  "
-                class="!bg-slate-800 !rounded-lg"
+                prisimClassName="dark:!bg-slate-900 bg-slate-50 rounded-lg  "
+                class="!bg-slate-900 !rounded-lg"
                 ref="codebox"
               >
                 <template #header="{ copyToClipboard, copyText }">

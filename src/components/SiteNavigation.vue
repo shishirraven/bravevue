@@ -126,6 +126,15 @@
     
     
     
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_field" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-ui-checks
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Brave Field</div>
+    </router-link>
+    
+    
+    
     <div class="text-sm tracking-wider py-4">HELP</div>
 
     <router-link @click.native="$emit('jumpingToAnchor')"  to="/request_a_component" class="flex items-center p-3 ">
