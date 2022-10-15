@@ -71,6 +71,7 @@
       <h2 class="text-md mb-1">Radio</h2>
       <BraveField
         type="radio"
+        wrapperClass="mb-2"
         :options="[
           { label: 'France', value: 'fr', attrs: { disabled: true } },
           { label: 'Germany', value: 'de', attrs: { disabled: true } },
