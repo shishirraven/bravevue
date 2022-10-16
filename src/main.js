@@ -18,4 +18,8 @@ app.component("RenderTree1", RenderTree1);
 app.component("TreeNode", TreeNode); 
 
 app.use(router)
+
+import bravevue from 'bravevue';
+app.use(bravevue);
+
 app.mount('#app')

@@ -18,6 +18,7 @@
           BraveVue can work with any of the Popular CSS Frameworks(Tailwind,
           Bootstrap ...) and Custom CSS.
         </p>
+        
 
         <h1 class="my-5 text-xl">Installation</h1>
 
@@ -26,7 +27,7 @@
           <template #code>{{ `npm i bravevue` }} </template>
         </BrTaSyntaxHighlighter>
 
-        <h2 class="my-5 text-xl text-slate-300">
+        <h2 class="my-5 text-xl dark:text-slate-300">
           The bravevue package ships with a Vue plugin and a default
           configuration for easy setup:
         </h2>

@@ -19,6 +19,11 @@ import RequestAComponent from "./views/RequestAComponent.vue";
 export const routes = [
   { path: "/", component: Home, meta: { title: "Home" } },
   {
+    path: "/brave_block_tree",
+    meta: { title: "Brave Block Tree" },
+    component: () => import("./views/BraveBlockTree.vue"),
+  },
+  {
     path: "/brave_sidebar_layout",
     meta: { title: "Brave Sidebar Layout" },
     //component: BraveSidebarLayout,
