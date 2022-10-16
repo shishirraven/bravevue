@@ -12,6 +12,7 @@ export default {
 }
 </script>
 <template>
+  
   <BraveSidebarLayout sidebar-class="  bg-slate-900 flex flex-col text-white " :sidebar-width="300">
     <!-- SIDEBAR TEMPLATE -->
     <template v-slot:sidebar="{closeMenu,openMenu}">
@@ -55,10 +56,10 @@ export default {
     <template v-slot:content="{closeMenu,openMenu}">
       <div class="p-2  cursor-pointer text-2xl inline-block md:hidden" @click="openMenu()"><i
           class=" bi bi-three-dots-vertical"></i></div>
-          <div class="">
-            <BraveThemeSwitch/>
-        <router-view />
-      </div>
+            <div class="">
+              <BraveThemeSwitch/>
+          <router-view />
+        </div>
     </template>
   </BraveSidebarLayout>
 </template>
