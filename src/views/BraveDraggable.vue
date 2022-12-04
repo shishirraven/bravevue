@@ -4,6 +4,11 @@
   <main class="flex-1 lg:p-16">
     <BraveDraggable 
         class=""
+        :automaticDocking="false"
+        :rotatable="true"
+        v-model:width="config.width"
+        v-model:height="config.height"
+        :reSizable="true"
         :visible="config.visible"
         :position="config.position"
         :placement="config.placement"
@@ -11,7 +16,7 @@
         @placement-change="config.placement = $event"
         @position-change="config.position = $event"
         >  
-        <div class="rounded-lg bg-indigo-800 text-white shadow-lg  border border-white w-80"><!-- Body -->
+        <div :style="{width:config.width,height:config.height}" class="overflow-auto rounded-lg bg-indigo-800 text-white shadow-lg  border border-white "><!-- Body -->
             <!-- TITLE BAR -->
             <div @mousedown="onHandleMouseDown" 
                 @touchstart="onHandleMouseDown"  
@@ -20,12 +25,13 @@
                 class="cursor-move bg-indigo-900 px-5 py-2 rounded-t-lg flex  gap-x-2">
                 <!-- bootstrap move icon -->
                 <i class="bi bi-arrows-move"></i>
-                Demo Draggable Window
+                Demo Draggable Window  
             </div>
 
             <!-- CONTENT -->
             <div class="p-5">
                 <p class="text-white text-sm">
+                  <pre>{{config}}</pre>
                     Hey, I am a Brave Draggable. Try to use the Title bar in this window to drag me arround.
                     
                 </p>
@@ -40,9 +46,6 @@
             </div>
         </div>
       </BraveDraggable>
-
-
-
 
     <div class="py-6">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -468,6 +471,8 @@ export default {
     return {
         config : {
                     visible: true,
+                    width : "200px",
+                    height :"100px", 
                     position: {
                         top: '10px',
                         right: '10px'

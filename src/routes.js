@@ -42,6 +42,24 @@ export const routes = [
     component: () => import("./views/BraveField.vue"),
   },
   {
+    path: "/touch-swipe-up",
+    meta: { title: "Touch Swipe Up" },
+    //component: BraveSidebarLayout,
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("./views/BraveSwipeUp.vue"),
+  },
+  {
+    path: "/touch-swipe-down",
+    meta: { title: "Touch Swipe Down" },
+    //component: BraveSidebarLayout,
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("./views/BraveSwipeDown.vue"),
+  },
+  {
     path: "/brave_tags",
     meta: { title: "Brave Sidebar Layout" },
     //component: BraveSidebarLayout,

@@ -133,6 +133,23 @@
         <div class="ml-2">Input Field</div>
     </router-link>
     
+    <div class="text-sm tracking-wider py-4">DIRECTIVES</div>
+
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/touch-swipe-up" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-chevron-double-up
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Touch Swipe Up</div>
+    </router-link>
+
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/touch-swipe-down" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-chevron-double-down
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Touch Swipe Down</div>
+    </router-link>
+
+    
     
 
         

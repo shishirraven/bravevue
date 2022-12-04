@@ -115,7 +115,7 @@ export default {
 
           <h3 id="tailwindcss-styled-pills-example">Pills Tab Style with Tailwind CSS</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code','stackblitz']" initialTab="example">
-            <!-- Links to StackBlitz -->
+           
             <template #after-tab>
                 <div class="text-right grow ">
                   
