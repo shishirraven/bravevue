@@ -43,7 +43,7 @@ export const routes = [
   },
   {
     path: "/brave-bottom-sheet",
-    meta: { title: "Brave " },BottomSheet
+    meta: { title: "Brave BottomSheet" },
     //component: BraveSidebarLayout,
     // example of route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
