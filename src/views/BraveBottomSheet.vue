@@ -55,64 +55,41 @@
                   <BrTaSyntaxHighlighter language="javascript">
                       <template #title>BraveTabsExample.vue</template>
                       <template #code>{{`<template>
-  <BraveTabs ref="bravetabref" class="text-black dark:text-white my-10" tabs-wrapper-class="flex items-center"
-    tabs-content-class="border  p-10 dark:bg-slate-800"
-    tab-button-class="px-4 py-2 mr-px cursor-pointer rounded-t-lg mr-0 dark:bg-slate-900 bg-gray-50 hover:dark:bg-slate-800 hover:bg-gray-200"
-    tab-button-active-class="px-4 py-2 mr-px shadow-inner-sm -mb-px border rounded-t-lg border-b-0 dark:bg-slate-800 bg-white "
-    v-bind:tabs="['mobile','appliances','computers','gaming']" initialTab="mobile">
-    <template #before-tab>
-      <div class="px-2"><img class="h-7 w-auto" src="@/assets/images/logo.svg" alt="BraveVue" /></div>
-    </template>
-    <template #after-tab>
-      <div class="px-2 grow text-right">
-        <div class="inline-block">Help</div>
+    <!-- Buttons to change the Sheets State to closed,half,full -->
+    <div class="flex lg:flex-row flex-col gap-2 mt-3">
+<!-- <button @click="state = 'closed'" type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Close Bottom Sheet</button> -->
+<button @click="state = 'half'" type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Half Open Bottom Sheet</button>
+<button @click="state = 'full'" class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Open Bottom Sheet to Full Height</button>
+        
+    </div>
+    <BraveBottomSheet
+      class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl pt-2"
+      :state="state"
+      sheet-close="10%"
+      sheet-half-open="50%"
+      sheet-full-open="90%"
+    >
+      <div class="mb-3 flex justify-center">
+        <div class="h-1 w-16 rounded-full bg-slate-500"></div>
       </div>
-    </template>
-    <!-- ================================================================ -->
-    <!-- SETTINGS PANEL  -->
-    <!-- ================================================================ -->
-    <template #tab-head-mobile>Mobile</template>
-    <template #tab-panel-mobile>
-      <h1 class="text-3xl mb-5">Content for mobile Panel</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
-        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
-    </template>
-
-    <!-- Appliance Panel -->
-
-    <template #tab-head-appliances>Appliances</template>
-    <template #tab-panel-appliances>
-      <h1 class="text-3xl mb-5">Content for Appliances Panel</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
-        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
-    </template>
-
-    <!-- Computer Panel -->
-
-    <template #tab-head-computers>💻 Computers</template>
-    <template #tab-panel-computers>
-      <h1 class="text-3xl mb-5">Content for Computers Panel</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
-        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
-    </template>
-
-    <!-- Gaming Panel -->
-
-    <template #tab-head-gaming> Gaming</template>
-    <template #tab-panel-gaming>
-      <h1 class="text-3xl mb-5">Content for Gaming Panel</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sunt atque unde ex odit consequatur recusandae
-        maxime ullam inventore, porro laudantium soluta deleniti itaque quibusdam et, quas eaque minima fuga.</p>
-    </template>
-  </BraveTabs>
-</template>
-<script>
-import { BraveTabs } from "bravevue";
-export default {
-  components: { BraveTabs },
-};
-</script>
-`}}
+      <div class="p-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto eaque possimus, sit fugiat distinctio mollitia reiciendis incidunt corporis accusantium, consequuntur quos non ipsa dolorum sapiente debitis obcaecati asperiores cum.
+      </div>
+    </BraveBottomSheet>
+  </template>
+  <script>
+  import { BraveBottomSheet } from 'bravevue';
+  export default {
+    components: {
+      BraveBottomSheet,
+    },
+    data() {
+      return {
+        state: "closed",
+      };
+    },
+  };
+  </script>`}}
                       </template>
                   </BrTaSyntaxHighlighter>
               </template>
@@ -126,7 +103,8 @@ export default {
                   <span class="glyphicon glyphicon-link"></span>
               </a>
           </h2>
-          <table>
+          <div class="overflow-auto w-full">
+          <table class=" ">
               <thead class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-800 dark:text-slate-400">
                   <tr>
                       <th scope="col" class="py-3 px-6">Prop</th>
@@ -234,6 +212,7 @@ export default {
               </tr>
               
           </table>
+        </div>
           <h2 class="mt-30" id="slots">
               Slots
               <a href="#slots" name="slots" class="anchor">
@@ -241,6 +220,8 @@ export default {
                   <span class="glyphicon glyphicon-link"></span>
               </a>
           </h2>
+          
+          <div class="overflow-auto w-full">
           <table class="mb-28">
               <tr>
                   <td class="py-4 px-6">
@@ -263,6 +244,7 @@ export default {
                   </td>
               </tr>
                         </table>
+                        </div>
       </div>
   </main>
 </template>
