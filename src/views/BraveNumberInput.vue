@@ -114,6 +114,7 @@
         The following keyboard controls are available when the `Brave Number Input` button is
         focused.
       </p>
+      <div class="overflow-auto w-full">
       <table>
         <thead class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-800 dark:text-slate-400 ">
           <tr>
@@ -206,8 +207,10 @@
           </tr>
         </tbody>
       </table>
+      </div>
       <h2 id="props">Props
       </h2>
+      <div class="overflow-auto w-full">
       <table>
         <thead class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-800 dark:text-slate-400 ">
           <tr>
@@ -343,8 +346,10 @@
           </td>
         </tr>
       </table>
+      </div>
       <h2 class="mt-30">Slots
       </h2>
+      <div class="overflow-auto w-full">
       <table>
         <tr>
           <td class="py-4 px-6">
@@ -377,6 +382,7 @@
           </td>
         </tr>
       </table>
+      </div>
     </div>
   </main>
 </template>

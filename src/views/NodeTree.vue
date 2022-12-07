@@ -1,5 +1,5 @@
 <template>
-    <h1>Hello World123</h1>
+    <h1>You can edit this text by clicking</h1>
     <div class="flex">
         <div @click="insertNode" class="bg-slate-100">Button 1</div>
         <div @click="insertNode"  class="bg-slate-100">Button 2</div>

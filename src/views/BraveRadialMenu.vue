@@ -176,6 +176,7 @@ export default {
                   <span class="glyphicon glyphicon-link"></span>
               </a>
           </h2>
+          <div class="overflow-auto w-full">
           <table>
               <thead class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-800 dark:text-slate-400">
                   <tr>
@@ -241,6 +242,7 @@ export default {
                   </td>
               </tr>
           </table>
+          </div>
 
           <!-- important note -->
           <div class="border p-3">
@@ -254,6 +256,7 @@ export default {
                   <span class="glyphicon glyphicon-link"></span>
               </a>
           </h2>
+          <div class="overflow-auto w-full">
           <table>
               <tr>
                   <td class="py-4 px-6">
@@ -278,6 +281,7 @@ export default {
                   </td>
               </tr>
           </table>
+          </div>
       </div>
   </main>
 </template>
