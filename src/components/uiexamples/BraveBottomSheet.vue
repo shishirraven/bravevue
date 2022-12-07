@@ -7,23 +7,33 @@
         
     </div>
     <BraveBottomSheet
-      class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl pt-2"
+      class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl "
       :state="state"
       sheet-close="10%"
       sheet-half-open="50%"
       sheet-full-open="90%"
+      v-slot="{up,down}"
+      
     >
-      <div class="mb-3 flex justify-center">
-        <div class="h-1 w-16 rounded-full bg-slate-500"></div>
+      <!-- DRAGGABLE HANDLE -->
+      <div  
+        v-SwipeUp="up"
+        v-SwipeDown="down" 
+        style="touch-action: none;"
+        class="p-4 flex justify-center touch-none cursor-ns-resize">
+        <div class="h-1 w-16 rounded-full bg-slate-500" ></div>
       </div>
-      <div class="p-5">
+      <!-- x-----x -->
+
+      <div class="px-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto eaque possimus, sit fugiat distinctio mollitia reiciendis incidunt corporis accusantium, consequuntur quos non ipsa dolorum sapiente debitis obcaecati asperiores cum.
       </div>
     </BraveBottomSheet>
   </template>
   <script>
-  import { BraveBottomSheet } from 'bravevue';
+  import { BraveBottomSheet,SwipeUp, SwipeDown } from 'bravevue';
   export default {
+    directives: { SwipeUp, SwipeDown },
     components: {
       BraveBottomSheet,
     },

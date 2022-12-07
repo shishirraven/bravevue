@@ -1,5 +1,5 @@
 <template>
-  <main class="flex-1 p-4 lg:p-10 xl:p-16">
+  <main class="flex-1 p-4 lg:p-10 xl:p-16 mb-28">
       <div
           class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block">
           <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">
@@ -18,12 +18,30 @@
                             Live example
                         </a>
                     </li>
-                    <!-- tailwindCSS styled pills example -->
+                    
                     <li class="mb-2">
-                        <a href="#tailwindcss-styled-pills-example" class="text-slate-900 dark:text-slate-100">
-                            Pills Styled example with Tailwind CSS
+                        <a href="#features" class="text-slate-900 dark:text-slate-100">
+                            Features
                         </a>
                     </li>
+
+                    <li class="mb-2">
+                        <a href="#design_concept" class="text-slate-900 dark:text-slate-100">
+                            Design concept
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#styling_bottomsheet" class="text-slate-900 dark:text-slate-100">
+                            Styling Bottom Sheet
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#creating_bottom_sheet_handle" class="text-slate-900 dark:text-slate-100">
+                            Creating BottomSheet Handle
+                        </a>
+                    </li>
+                    
                   <li class>
                       <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                           href="#props">Props</a>
@@ -63,23 +81,33 @@
         
     </div>
     <BraveBottomSheet
-      class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl pt-2"
+      class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl "
       :state="state"
       sheet-close="10%"
       sheet-half-open="50%"
       sheet-full-open="90%"
+      v-slot="{up,down}"
+      
     >
-      <div class="mb-3 flex justify-center">
-        <div class="h-1 w-16 rounded-full bg-slate-500"></div>
+      <!-- DRAGGABLE HANDLE -->
+      <div  
+        v-SwipeUp="up"
+        v-SwipeDown="down" 
+        style="touch-action: none;"
+        class="p-4 flex justify-center touch-none cursor-ns-resize">
+        <div class="h-1 w-16 rounded-full bg-slate-500" ></div>
       </div>
-      <div class="p-5">
+      <!-- x-----x -->
+
+      <div class="px-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto eaque possimus, sit fugiat distinctio mollitia reiciendis incidunt corporis accusantium, consequuntur quos non ipsa dolorum sapiente debitis obcaecati asperiores cum.
       </div>
     </BraveBottomSheet>
   </template>
   <script>
-  import { BraveBottomSheet } from 'bravevue';
+  import { BraveBottomSheet,SwipeUp, SwipeDown } from 'bravevue';
   export default {
+    directives: { SwipeUp, SwipeDown },
     components: {
       BraveBottomSheet,
     },
@@ -94,6 +122,168 @@
                   </BrTaSyntaxHighlighter>
               </template>
           </BrTaTabs>
+
+          <!-- explaining how it works -->
+
+          <h2 id="features">Features</h2>
+          <ul>
+            <li>Works with both Touch and Mouse</li>
+            <li>Style as you like</li>
+          </ul>
+
+          <h2 id="design_concept">Design Concept</h2>
+          <!-- DIAGRAM -->
+
+          <div class="border-slate-800 bg-slate-900 p-10">
+  <div class="overflow-y-cli relative mr-36 h-72 overflow-x-visible rounded border-2 border-yellow-300 bg-slate-900">
+    <!-- Header -->
+    <div class="flex border-b-2 border-yellow-500 p-2">
+      <div class="mr-2 h-3 w-3 rounded-full border-2 border-yellow-500"></div>
+      <div class="mr-2 h-3 w-3 rounded-full border-2 border-yellow-500"></div>
+      <div class="mr-2 h-3 w-3 rounded-full border-2 border-yellow-500"></div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="absolute bottom-0 right-0 left-0 h-44 rounded-t-2xl border-2 border-b-0 border-yellow-600 bg-slate-800 shadow-md">
+      <div class="flex cursor-ns-resize touch-none justify-center p-4">
+        <div class="relative h-3 w-16 rounded-full bg-slate-500">
+          <div class="absolute -top-4 left-10  flex items-center">
+            <div class="2 h-4 w-4 rounded-full bg-green-500 opacity-50"></div>
+            <div class="flex-1 w-11 border-t-2 border-dotted border-green-500"></div>
+            <div class="w-32 px-2 py-1 text-green-200 rounded-lg shadow-lg bg-green-900">Bottom Sheet Handle</div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+
+    <!-- Markers  -->
+        <!-- Markers  -->
+          <div class="absolute top-48 -right-40 flex items-center">
+            <div class="2 h-4 w-4 rounded-full bg-green-500"></div>
+            <div class="w-16 border-t-2 border-dotted border-green-500"></div>
+            <div class="w-32 p-1 text-green-500">Bottom Sheet Component</div>
+          </div>
+    
+  </div>
+</div>
+
+          <!-- DIAGRAM ENDS -->
+          <p>
+            Brave Bottom Sheets are designed to allow maximum Styling Possible. 
+          </p>
+          <p>Not only you can style the content that you put Inside the Component using Slots. But you can completely Deisgn.</p>
+          <ul>
+            <li>BottomSheet Container</li>
+            <li>BottomSheet Handle</li>
+          </ul>
+
+          <h2 id="styling_bottomsheet">How to Style BottomSheet</h2>
+          <p>
+            You can Style the BottomSheet Container using any CSS Classes. In our examples we have used Tailwind CSS to demonstrate the usage. 
+          </p>
+          <p>
+            Out of the box the Bottom Sheet does not have a default Style. Apart from the ones which are required for the Component to work.
+          </p>
+
+          <p>
+            To Style theBottomSheet Container you can directly add the class to the Component just as you would do to any HTML element.
+            
+        </p>
+        Like class="your classes..."
+          <p>
+           
+            Here is an example of how you can add Classes. 
+          </p>
+
+            <BrTaSyntaxHighlighter language="html">
+                <template #title>Styling the BottomSheet container with CSS Classes</template>
+                <template #code>{{`<BraveBottomSheet
+ class="bg-slate-200 
+        border
+        border-slate-600 
+        dark:bg-slate-900 
+        rounded-t-
+        3xl 
+        ">`}}</template>
+            </BrTaSyntaxHighlighter>
+            <p>In the above example we have used Tailwind CSS to do the following</p>
+            <ul>
+                <li>Add Background Color</li>
+                <li>Make the top Corners Rounded</li>
+                <li>Add Padding</li>
+                <li>Add Borders</li>
+            </ul>
+
+            <p>You may choose to use a Styling of your own choice.</p>
+    
+
+            <h2  id="creating_bottom_sheet_handle">Creating BottomSheet Handle</h2>
+
+            <h3>What is a Handle?</h3>
+            <p>
+                Handle is the Area where you can drag the BottomSheet to open and close it.
+            </p>
+            <p>
+                By default there is no BottomSheet Handle. You have to create it yourself. 
+           
+                Don't worry it is very easy to do.
+            </p>
+            <p>
+                You can create the Handle using any HTML Element.
+           
+                In our examples we have used a simple Div Element.
+            </p>
+            <p>
+                Here is an example of how you can create a BottomSheet Handle.
+            </p>
+
+            <BrTaSyntaxHighlighter language="html">
+                <template #title>Creating a Handle</template>
+                <template #code>{{`   <!-- DRAGGABLE HANDLE -->
+      <div  
+        v-SwipeUp="up"
+        v-SwipeDown="down" 
+        style="touch-action: none;"
+        class="p-4 flex justify-center touch-none cursor-ns-resize">
+        <div class="h-1 w-16 rounded-full bg-slate-500" ></div>
+      </div>
+      <!-- x-----x -->`}}</template>
+            </BrTaSyntaxHighlighter>
+
+            <p>
+                In the above example we have used a simple Div Element to create the Handle.
+            </p>
+
+            <p>
+                In this example you need to notice that there are two custom directives are used. 
+            </p>
+            <ul>
+                <li> v-SwipeUp="up"</li>
+                 <li>v-SwipeDown="down" </li>
+            </ul>
+            <p>Both these directives are to record Swipe Up and Swipe Down Actions. </p>
+
+            <p>
+                The functions `up` and `down` are passed to the Slot with v-slot as shown below. 
+            </p>
+            <BrTaSyntaxHighlighter language="html">
+                <template #title>using v-slot to get Swipe Actions</template>
+                <template #code>{{`<BraveBottomSheet
+v-slot="{up,down}" >`}}</template>
+            </BrTaSyntaxHighlighter>
+
+         
+            <p>
+                We also need to apply <code class="text-blue-500">style="touch-action: none;"</code> to the Handle Element. 
+            </p>
+            <p>
+                This is to prevent the Browser from handling the Swipe Actions.
+            </p>
+
+
+            
+            
+
 
 
           <h2 id="props">
@@ -222,7 +412,7 @@
           </h2>
           
           <div class="overflow-auto w-full">
-          <table class="mb-28">
+          <table >
               <tr>
                   <td class="py-4 px-6">
                       <strong>Name </strong>
@@ -245,6 +435,17 @@
               </tr>
                         </table>
                         </div>
+
+
+                    <h2>Planned Improvements</h2>
+                    <ul>
+                        <li><b>Covert the state into a v-model:state.</b>
+                        <p>
+                            This will allow the state to be updated programatically and also allow the user to update the
+                             state by from inside of the BottomSheet.
+                        </p>
+                    </li>
+                    </ul>
       </div>
   </main>
 </template>
