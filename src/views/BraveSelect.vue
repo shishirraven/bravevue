@@ -49,7 +49,28 @@
 <script>
 import BraveSelect from "@/components/uiexamples/BraveSelect.vue";
 import { BraveGistEmbed } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Select Input Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Select Input Component with which you can use your own templates and have full control of the styling.",
+                },
+                {
+                    name: "keywords",
+                    content: "Select, Input Component, Component, Advance Select Component, Vue 3, Javascript ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: {  BraveGistEmbed, BraveSelect },
 };
 </script>

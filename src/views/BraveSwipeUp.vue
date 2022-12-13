@@ -99,7 +99,28 @@ export default {
     import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
     import SwipeUpExample from "@/components/uiexamples/SwipeUpDirective/SwipeUpExample.vue";
 
-    export default {
+    import { useHead } from "@vueuse/head"
+
+export default {
+  mounted(){
+    useHead({
+            title: "SwipeUp Directive for Vue 3 | BraveVue Component Library ",
+            meta: [
+                {
+                    name: "description",
+                    content: "You can easily record the Swipe Up Action Made on the Page.",
+                },
+                {
+                    name: "keywords",
+                    content: "SwipeUp, Directive, Swipe Up Guesture, Touch Enabled",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        });
+  },
         components: {
         BraveRadialMenu,
         BraveGistEmbed,

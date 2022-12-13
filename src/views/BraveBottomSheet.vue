@@ -456,7 +456,18 @@ import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
 import BraveRadialMenu from "@/components/uiexamples/BrRadialMenu.vue";
 import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
 import BraveBottomSheet from "@/components/uiexamples/BraveBottomSheet.vue";
-export default {
+import { useHead } from "@vueuse/head"
+useHead({
+            title: "Bottom Sheet for Vue 3 | Brave Vue",
+            meta: [
+                {
+                    name: "description",
+                    content: "BraveVue Bottom Sheet for Vue 3. A Bottom Sheet Headless Component for Vue 3",
+                },
+            ],
+        });
+
+export default { 
   components: {
     BraveRadialMenu,
     BraveGistEmbed,

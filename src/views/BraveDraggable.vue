@@ -5,7 +5,9 @@
     <BraveDraggable 
         class=""
         :automaticDocking="false"
-        :rotatable="false"
+        :rotatable="true"
+        
+        :selected = "config.selected"
         v-model:width="config.width"
         v-model:height="config.height"
         :reSizable="true"
@@ -16,7 +18,7 @@
         @placement-change="config.placement = $event"
         @position-change="config.position = $event"
         >  
-        <div :style="{width:config.width,height:config.height}" class="overflow-auto rounded-lg bg-indigo-800 text-white shadow-lg  border border-white h-screen flex flex-col "><!-- Body -->
+        <div @click = "config.selected = false" :style="{width:config.width,height:config.height}" class="overflow-auto rounded-lg bg-indigo-800 text-white shadow-lg  border border-white h-screen flex flex-col "><!-- Body -->
             <!-- TITLE BAR -->
             <div @mousedown="onHandleMouseDown" 
                 @touchstart="onHandleMouseDown"  
@@ -465,11 +467,33 @@ export default {
 import BraveSlider from "@/components/uiexamples/BraveSlider.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed, BraveSyntaxHighlighter, BraveDraggable } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Draggable Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Brave Draggable is a Vue component that helps you make any element draggable with mouse or touch.",
+                },
+                {
+                    name: "keywords",
+                    content: "Draggable, Dockable, Rotatable, Resizable",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: { BraveGistEmbed, BraveSlider, BraveSyntaxHighlighter,BrTaSyntaxHighlighter, BraveDraggable },
   data(){
     return {
         config : {
+                   selected:false,
                     visible: true,
                     width : "200px",
                     height :"100px", 

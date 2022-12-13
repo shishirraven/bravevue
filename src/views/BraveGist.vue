@@ -35,7 +35,28 @@
 
 <script>
 import { BraveGistEmbed } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Gist Embed Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "use this Component to embed Github Gist, right now it solves the problem which one faces while using the script tag embed code given by Gist.",
+                },
+                {
+                    name: "keywords",
+                    content: "Gist Embed Component, Component, Vue3, BraveVue, Javascript ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: { BraveGistEmbed },
 };
 </script>

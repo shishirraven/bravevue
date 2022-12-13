@@ -291,7 +291,28 @@ import BraveTabs from "@/components/uiexamples/BraveTabs.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed } from "bravevue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Radial Menu Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Radial Menu displays a list of items in a circular menu design with option to print text.",
+                },
+                {
+                    name: "keywords",
+                    content: "Circular Context Menu, Stylish , Vue 3, Javascript ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: {
       BraveGistEmbed,
       BraveTabs,

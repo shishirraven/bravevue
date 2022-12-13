@@ -37,6 +37,7 @@
       </div>
       <div class="prose dark:prose-invert prose-slate  ">
           <h1 id="introduction"><i class="bi bi-segmented-nav"></i> Brave Tabs</h1>
+            <p>Tabs make it easy to explore and switch between different views.</p>
             <p>Brave Tabs is a Vue 3 component that allows you to create tabs with a simple and easy to use API.</p>
         <h3 id="live-example">Live Example</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code']" initialTab="example">
@@ -358,7 +359,28 @@ import { BraveGistEmbed } from "bravevue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
 import BraveRadialMenu from "@/components/uiexamples/BrRadialMenu.vue";
 import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
+import { useHead } from "@vueuse/head"
+
 export default {
+    mounted(){
+        useHead({
+            title: "Tags Input Component for Vue 3 | BraveVue Component Library ",
+            meta: [
+                {
+                    name: "description",
+                    content: "Tabs by BraveVue Component Library make it easy to explore and switch between different views",
+                },
+                {
+                    name: "keywords",
+                    content: "tab, tabs, tabbed, styless, headless, bravevue, vue 3, javascript",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        });
+    },
   components: {
     BraveRadialMenu,
     BraveGistEmbed,

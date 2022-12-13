@@ -165,7 +165,28 @@ export default {
   import BraveField from "@/components/uiexamples/BraveField.vue";
   import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
   import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
-  export default {
+  import { useHead } from "@vueuse/head"
+
+export default {
+  mounted(){
+    useHead({
+            title: "Form Field Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "BraveField allows you to quickly build a HTML form currently it contains fields for text, textarea, select, radio and checkbox.",
+                },
+                {
+                    name: "keywords",
+                    content: "Fields Builder,Form Field Compnent, Component, Vue3, BraveVue, Javascript, Radio, Select, Textarea, checkbox ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
       
     components: {
       BraveField,

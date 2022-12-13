@@ -177,7 +177,28 @@ export default{
 import BraveSlider from "@/components/uiexamples/BraveSlider.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed, BraveSyntaxHighlighter } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Sidebar Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Brave Sidebar Layout is a Vue component that allows you to create a sidebar layout with a sidebar and a content area.",
+                },
+                {
+                    name: "keywords",
+                    content: "Sidebar, Responsive, Headless, Vue3, Component, Headless, Styleless ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: { BraveGistEmbed, BraveSlider, BraveSyntaxHighlighter,BrTaSyntaxHighlighter },
 };
 </script>

@@ -392,7 +392,28 @@ import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed } from "bravevue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
 import BNI_basic from "@/components/uiexamples/BraveNumberInput/BNI_basic.vue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Number Input Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "BraveVue’s NumericInput lets the user edit and submit specific numeric values by typing or by using the spin buttons.",
+                },
+                {
+                    name: "keywords",
+                    content: " WAI-ARIA compliant, Stylish , Keyboard Contro, Number Input, Number Spinner, Spin Button, Vue 3, Javascript ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: { BraveGistEmbed, BraveTabs, BrTaSyntaxHighlighter, BrTaTabs, BNI_basic },
 };
 </script>

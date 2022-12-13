@@ -27,7 +27,28 @@
 <script>
 import BraveDropMenu from "@/components/uiexamples/BraveDropMenu.vue";
 import { BraveGistEmbed } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "DropMenu for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Show Menus for Navigation or any purpose, you can control the clicks of each option as you want. Full Control over Style",
+                },
+                {
+                    name: "keywords",
+                    content: "Drop Menu, Component, Vue3, BraveVue, Javascript",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: {  BraveGistEmbed, BraveDropMenu },
 };
 </script>

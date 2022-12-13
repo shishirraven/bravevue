@@ -36,7 +36,28 @@
 </template>
 <script>
 import { BravePositionDialog } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Position Dialog / Context Dialog Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "It is a modal context dialog which is positioned based on the click position.",
+                },
+                {
+                    name: "keywords",
+                    content: "Dialog, Position dialog, Context Menu, Context Dialog, Vue3, Component, Headless, Styleless ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: { BravePositionDialog },
 };
 </script>

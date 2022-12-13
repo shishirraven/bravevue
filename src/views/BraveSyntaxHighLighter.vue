@@ -101,7 +101,28 @@ import PositionDialogContextMenu from "@/components/uiexamples/PositionDialogCon
 import BraveSyntaxHighlighterDemo from "@/components/uiexamples/BraveSyntaxHighlighterDemo.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed, BraveTabs } from "bravevue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Syntax Highlighter Component for Vue 3 | BraveVue Component Library ",
+            meta: [
+                {
+                    name: "description",
+                    content: "Brave Syntax Hilighter is a super easy to use syntax highlighter based on Prismjs javascript",
+                },
+                {
+                    name: "keywords",
+                    content: "Syntax highlighter, Vue 3, Javascript, Prismjs, BraveVue, Copy Code Button, Copy Code",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        });
+  },
   components: {
     BraveGistEmbed,
     PositionDialogExampleVue,

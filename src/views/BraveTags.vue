@@ -213,6 +213,24 @@ export default {
 import BraveTags from "@/components/uiexamples/BraveTags.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
+import { useHead } from "@vueuse/head"
+useHead({
+            title: "Tags Input Component for Vue 3 | Brave Vue",
+            meta: [
+                {
+                    name: "description",
+                    content: "Tags Input Component for Vue 3 is a Styleless component by BraveVue Component Library.",
+                },
+                {
+                    name: "keywords",
+                    content: "tag, tags, tagging, , javascript, component, web, BraveTags, VueJS 3",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        });
 export default {
     
   components: {

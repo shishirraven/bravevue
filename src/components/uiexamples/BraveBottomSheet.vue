@@ -32,7 +32,9 @@
   </template>
   <script>
   import { BraveBottomSheet,SwipeUp, SwipeDown } from 'bravevue';
+
   export default {
+
     directives: { SwipeUp, SwipeDown },
     components: {
       BraveBottomSheet,

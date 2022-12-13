@@ -99,7 +99,29 @@ export default {
     import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
     import SwipeDownExample from "@/components/uiexamples/SwipeUpDirective/SwipeDownExample.vue";
 
-    export default {
+
+    import { useHead } from "@vueuse/head"
+
+export default {
+  mounted(){
+    useHead({
+            title: "Swipe Down Directive for Vue 3 | BraveVue Component Library ",
+            meta: [
+                {
+                    name: "description",
+                    content: "You can easily record the Swipe Down Action Made on the Page and call a method",
+                },
+                {
+                    name: "keywords",
+                    content: "Swipe Down, Directive, Swipe Down Guesture, Touch Enabled, Mouse Enabled",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        });
+  },
         components: {
         BraveRadialMenu,
         BraveGistEmbed,

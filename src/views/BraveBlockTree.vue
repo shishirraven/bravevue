@@ -445,7 +445,28 @@ import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
 import SimpleBraveTreeExample from "@/components/uiexamples/Blocks/BlockTree/SimpleBraveTreeExample.vue";
 import BraveTreeWithTextNodes from "@/components/uiexamples/Blocks/BlockTree/BraveTreeWithTextNodes.vue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Block Tree Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Block Tree Component is a Vue 3 component library for building a Block Editor.",
+                },
+                {
+                    name: "keywords",
+                    content: "Block Tree, Block Editor",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: {
     BraveField,
     BrTaSyntaxHighlighter,

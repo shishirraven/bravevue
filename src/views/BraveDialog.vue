@@ -50,7 +50,7 @@
           </div>
       </div>
       <div class="prose dark:prose-invert prose-slate  ">
-          <h1 id="introduction"><i class="bi bi-window"></i> Brave Dialog</h1>
+          <h1 id="introduction"><i class="bi bi-window"></i> Dialog / Modal Component </h1>
             <p>Brave Dialogs can be used to create Modals, Use it for Info Boxes, Confirm Dialogs, Settings Panel, Dialog forms. Etc. </p>
         <h2 id="live-example">Live Examples </h2>
         <h3 id="live-example-simple">Simple Example</h3>
@@ -837,7 +837,28 @@ import InfoDialog from "@/components/uiexamples/BraveDialog/InfoDialog.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
 import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
+import { useHead } from "@vueuse/head"
+
 export default {
+  mounted(){
+    useHead({
+            title: "Dialog Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "Brave Dialogs can be used to create Modals, Use it for Info Boxes, Confirm Dialogs, Settings Panel, Dialog forms. Etc",
+                },
+                {
+                    name: "keywords",
+                    content: "Modal, Modals, Vue 3, Modal Component, Stylable, Headless",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        })
+  },
   components: {
     SimpleDialog,
     ConfirmationDialog,
