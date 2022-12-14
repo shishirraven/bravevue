@@ -450,6 +450,6 @@ export default {
             ],
         });
   },
-  components: { BraveGistEmbed, BraveSlider , BraveSyntaxHighlighter},
+  components: {  BraveSlider , },
 };
 </script>
