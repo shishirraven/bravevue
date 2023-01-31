@@ -429,7 +429,23 @@ export default {
 import BraveSlider from "@/components/uiexamples/BraveSlider.vue";
 
 import { useHead } from "@vueuse/head"
-
+useHead({
+            title: "Brave Slider Component for Vue 3 | Brave Components Library.",
+            meta: [
+                {
+                    name: "description",
+                    content: "BraveSlider is a responsive slider that you can use to slide any HTML Content or Images.",
+                },
+                {
+                    name: "keywords",
+                    content: "HTML Slider, Images Slider, Responsive, Vue3, Component, Headless, Styleless ",
+                },
+                {
+                    name: "author",
+                    content: "Shishir Raven",
+                },
+            ],
+        });
 export default {
   mounted(){
     useHead({
@@ -450,6 +466,6 @@ export default {
             ],
         });
   },
-  components: { BraveGistEmbed, BraveSlider , BraveSyntaxHighlighter},
+  components: { BraveSlider },
 };
 </script>

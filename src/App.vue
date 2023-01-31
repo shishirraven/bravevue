@@ -8,14 +8,21 @@ export default {
     BraveSidebarLayout,
     BraveThemeSwitch,
     SiteNavigation
+  },
+  methods: {
+    closeIfNotMobile(closeMenu,isMobile){
+      if(isMobile){
+        closeMenu()
+      }
+    }
   }
 }
 </script>
 <template>
-  
+  <client-only>
   <BraveSidebarLayout sidebar-class="  bg-slate-900 flex flex-col text-white " :sidebar-width="300">
     <!-- SIDEBAR TEMPLATE -->
-    <template v-slot:sidebar="{closeMenu,openMenu}">
+    <template v-slot:sidebar="{closeMenu,openMenu,panelState,isMobile}">
       <div class="p-2  cursor-pointer text-2xl absolute right-0 top-0 md:hidden" @click="closeMenu()"><i
           class=" bi bi-x-circle"></i></div>
       <router-link to="/">
@@ -24,7 +31,7 @@ export default {
           <div class="ml-2 text-lg">BraveVue</div>
         </div>
       </router-link>
-      <SiteNavigation class="p-5 flex-grow overflow-auto" @jumpingToAnchor="closeMenu" />
+      <SiteNavigation class="p-5 flex-grow overflow-auto" @jumpingToAnchor="closeIfNotMobile(closeMenu,isMobile)" />
       <div class="flex-shrink-0 flex border-t dark:border-slate-600 border-cyan-800 p-4">
         <a target="_blank" href="https://iamshishir.com/about-me/" class="flex-shrink-0 w-full group block">
           <div class="flex items-center">
@@ -57,9 +64,12 @@ export default {
       <div class="p-2  cursor-pointer text-2xl inline-block md:hidden" @click="openMenu()"><i
           class=" bi bi-three-dots-vertical"></i></div>
             <div class="">
-              <BraveThemeSwitch/>
+              <client-only>
+                <BraveThemeSwitch/>
+              </client-only>
           <router-view />
         </div>
     </template>
   </BraveSidebarLayout>
+</client-only>
 </template>

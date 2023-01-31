@@ -29,7 +29,7 @@
             <BrTaTabs class="not-prose" v-bind:tabs="['example','code','stackblitz']" initialTab="example">
                 <template #tab-head-example>Basic Example</template>
                 <template #tab-panel-example>
-                    <BraveField/>
+                   <client-only> <BraveField/></client-only>
                 </template>
                 <template #tab-head-code>Source Code</template>
                 <template #tab-panel-code>
