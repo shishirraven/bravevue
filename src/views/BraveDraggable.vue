@@ -4,9 +4,10 @@
   <main class="flex-1 lg:p-16">
     <BraveDraggable 
         class=""
+        :isSelectable="false"
         :automaticDocking="false"
         :rotatable="true"
-        
+        v-model:angle="config.angle"
         :selected = "config.selected"
         v-model:width="config.width"
         v-model:height="config.height"
@@ -319,13 +320,104 @@ export default {
       <tbody>
 
         
-
-            
-        
-            
         <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">width</code>
+                  <code class="text-blue-600 dark:text-blue-400">rotatable</code>
+              </td>
+              <td class="px-6 py-4">
+                  Boolean
+              </td>
+              <td class="px-6 py-4">
+                 False
+              </td>
+              <td class="px-6 py-4">
+                    If you want Rotatable Handle to be visible. Default is false.
+                </td>
+            </tr>
+            
+               
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">layout</code>
+              </td>
+              <td class="px-6 py-4">
+                  String
+              </td>
+              <td class="px-6 py-4">
+                Fixed
+              </td>
+              <td class="px-6 py-4">
+                    You can set the layout of the draggable window. Default is 'fixed'.
+                </td>
+            </tr>
+            
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">visible</code>
+              </td>
+              <td class="px-6 py-4">
+                Boolean
+              </td>
+              <td class="px-6 py-4">
+                true 
+              </td>
+              <td class="px-6 py-4">
+                    You can set the visibility of the draggable window. Default is true.
+                </td>
+            </tr>
+            
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400"> isSelectable</code>
+              </td>
+              <td class="px-6 py-4">
+                Boolean
+              </td>
+              <td class="px-6 py-4">
+                true 
+              </td>
+              <td class="px-6 py-4">
+                    You can set the visibility of the handles and select border of the draggable window. Default is true.
+                </td>
+            </tr>
+
+                
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">v-model:width</code>
+              </td>
+              <td class="px-6 py-4">
+                String
+              </td>
+              <td class="px-6 py-4">
+                auto
+              </td>
+              <td class="px-6 py-4">
+                    You can set the width of the draggable window. Default is 'auto'.
+                </td>
+            </tr>
+            
+                    
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">v-model:height</code>
+              </td>
+              <td class="px-6 py-4">
+                String
+              </td>
+              <td class="px-6 py-4">
+                auto
+              </td>
+              <td class="px-6 py-4">
+                    You can set the height of the draggable window. Default is 'auto'.
+                </td>
+            </tr>
+            
+
+                 
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">v-model:angle</code>
               </td>
               <td class="px-6 py-4">
                   Number
@@ -334,25 +426,12 @@ export default {
                   Optional
               </td>
               <td class="px-6 py-4">
-                    Width of the Draggable Window
+                    You can set the inital angle of the draggable window. Default is 0.
                 </td>
             </tr>
+            
+        
 
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">height</code>
-              </td>
-              <td class="px-6 py-4">
-                    Number
-              </td>
-              <td class="px-6 py-4">
-                  Optional
-              </td>
-              <td class="px-6 py-4">
-                    Height of the Draggable Window
-                        
-                </td>
-            </tr>
           
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
@@ -494,6 +573,7 @@ export default {
     return {
         config : {
                    selected:false,
+                   angle :0, 
                     visible: true,
                     width : "200px",
                     height :"100px", 
