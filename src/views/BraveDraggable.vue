@@ -4,7 +4,7 @@
   <main class="flex-1 lg:p-16">
     <BraveDraggable 
         class=""
-        :isSelectable="false"
+        :isSelectable="true"
         :automaticDocking="false"
         :rotatable="true"
         v-model:angle="config.angle"
