@@ -5,7 +5,7 @@
     <BraveDraggable 
         class=""
         :isSelectable="true"
-        :automaticDocking="false"
+        :automaticDocking="true"
         :rotatable="true"
         v-model:angle="config.angle"
         :selected = "config.selected"
