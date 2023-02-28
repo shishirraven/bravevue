@@ -1,34 +1,34 @@
 <template>
-    <main class="flex-1 p-4 lg:p-10 xl:p-16">
-        <div
-            class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block">
-            <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">
-                On this page
-            </h5>
-            <div id="navigation">
-                <ul class="navtext-slate-700 text-sm leading-6">
-                      <li class="mb-2">
-                          <a href="#introduction" class="text-slate-900 dark:text-slate-100">
-                              Introduction
-                          </a>
-                      </li>
-                      <!-- live example -->
-                      <li class="mb-2">
-                          <a href="#live-example" class="text-slate-900 dark:text-slate-100">
-                              Live example
-                          </a>
-                      </li>
-                    
-                </ul>
+    <main class="flex-1 p-4 lg:p-10 lg:pt-16">
+    
+        <div class="prose dark:prose-invert prose-slate max-w-none  ">
+            <h1 id="introduction"><i class="bi bi-ui-radios"></i> Radio </h1>
+           
+<p>Uses native radio. You can build by passing options in following 3 Ways.</p>
+<ol>
+  <li>Array of strings</li>
+  <li>Value / Label object</li>
+  <li>Array of objects</li>
+</ol>
+
+
+            <h2>Array of strings</h2>
+
+            <div class="h-96">
+
+                
+                <VueLive
+                :layout="CustomLayout" 
+                :editorProps="{ lineNumbers: true }" 
+                :code="codeSfcRadio"
+                :components="{ BraveField }"
+                @error="(e) => handleError(e)"
+              />
+
             </div>
-        </div>
-        <div class="prose dark:prose-invert prose-slate  ">
-            <h1 id="introduction"><i class="bi bi-ui-checks"></i> Brave Field</h1>
-              <p>BraveField allows you to quickly build a HTML form currently it contains fields for text, textarea, select, radio and checkbox. </p>
 
 
-            <h2>Live Example </h2>
-             
+          
 
 
           <h3 id="live-example">Live Example</h3>
@@ -168,14 +168,32 @@ export default {
     </main>
   </template>
   <script>
+  import { VueLive } from "vue-live";
+   // import the css separately for easier SSR
+  import "vue-live/style.css";
+  //  import "vue-live/lib/vue-live.esm.css";
+   import "prismjs/themes/prism-tomorrow.css";
+   import {  markRaw } from "vue";
+   import CustomLayout from "@/components/VueLiveLayout.vue";
+   
 
 
+
+
+//    import codeSfcRadio from  "@/components/uiexamples/BraveField/BraveRadio.vue?raw";
+   import codeSfcRadio from  "@/components/uiexamples/BraveField/BraveRadioSimpleArray.vue?raw";
   import BraveField from "@/components/uiexamples/BraveField.vue";
   import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
   import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
   import { useHead } from "@vueuse/head"
 
 export default {
+    data() {
+        return {
+            CustomLayout: markRaw(CustomLayout),
+            codeSfcRadio,
+        };
+    },
   mounted(){
     useHead({
             title: "Form Field Component for Vue 3 | Brave Components Library.",
@@ -201,7 +219,7 @@ export default {
         },
       },
     components: {
-    
+      VueLive,
       BraveField,
       BrTaSyntaxHighlighter,
       BrTaTabs,

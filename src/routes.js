@@ -10,6 +10,7 @@ import BraveSelect from "./views/BraveSelect.vue";
 import BraveTabs from "./views/BraveTabs.vue";
 import BraveSlider from "./views/BraveSlider.vue";
 import BraveSyntaxHighlighter from "./views/BraveSyntaxHighLighter.vue";
+// import BraveRadio from "./views/BraveRadio.vue";
 //import BraveDraggable from "./views/BraveDraggable.vue";
 //import BraveNumberInput from "./views/BraveNumberInput.vue";
 import RequestAComponent from "./views/RequestAComponent.vue";
@@ -22,6 +23,11 @@ export const routes = [
     path: "/brave_block_tree",
     meta: { title: "Brave Block Tree" },
     component: () => import("./views/BraveBlockTree.vue"),
+  },
+  {
+    path: "/bravefield_radio",
+    meta: { title: "Brave Block Tree" },
+    component: () => import("./views/BraveFieldRadio.vue"),
   },
   {
     path: "/brave_sidebar_layout",

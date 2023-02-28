@@ -61,7 +61,7 @@
           { label: 'Italy', value: 'ie' },
           { label: 'Greece', value: 'gr', attrs: { disabled: true } },
         ]"
-        v-model="selectValue3"
+        v-model="testObject"
         placeholder="This is my first field. "
         class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       /></client-only>
@@ -69,7 +69,8 @@
 
     <div class="mb-4">
       <h2 class="text-md mb-1">Radio</h2>
-      <client-only><BraveField
+      <client-only>
+        <BraveField
         type="radio"
         wrapperClass="mb-2"
         :options="[
@@ -79,7 +80,7 @@
           { label: 'Italy', value: 'ie' },
           { label: 'Greece', value: 'gr', attrs: { disabled: true } },
         ]"
-        v-model="selectValue3"
+        v-model="testObject"
         class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
       /></client-only>
     </div>
@@ -103,6 +104,7 @@ export default {
       selectValue1: "Pizza",
       selectValue2: "venus",
       selectValue3: "gr",
+      testObject : "shishir",
     };
   },
 };
