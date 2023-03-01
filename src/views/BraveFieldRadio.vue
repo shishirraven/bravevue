@@ -1,229 +1,197 @@
 <template>
-    <main class="flex-1 p-4 lg:p-10 lg:pt-16">
-    
-        <div class="prose dark:prose-invert prose-slate max-w-none  ">
-            <h1 id="introduction"><i class="bi bi-ui-radios"></i> Radio </h1>
-           
-<p>Uses native radio. You can build by passing options in following 3 Ways.</p>
-<ol>
-  <li>Array of strings</li>
-  <li>Value / Label object</li>
-  <li>Array of objects</li>
-</ol>
+  <main class="flex-1 p-4 lg:p-10 lg:pt-16">
+    <div class="prose prose-slate max-w-none dark:prose-invert">
+      <h1 id="introduction"><i class="bi bi-ui-radios"></i> Radio</h1>
 
+      <p>
+        Uses native radio. You can build by passing options in following 3 Ways.
+      </p>
+      <ol>
+        <li>Array of strings</li>
+        <li>Value / Label object</li>
+        <li>Array of objects</li>
+      </ol>
 
-            <h2>Array of strings</h2>
+      <h2>Array of strings</h2>
 
-            <div class="h-96">
+      <div class="md:h-96">
+        <VueLive
+          :layout="CustomLayout"
+          :editorProps="{ lineNumbers: true }"
+          :code="codeSfcRadioSimpleArray"
+          :components="{ BraveField }"
+          @error="(e) => handleError(e)"
+        />
+      </div>
 
-                
-                <VueLive
-                :layout="CustomLayout" 
-                :editorProps="{ lineNumbers: true }" 
-                :code="codeSfcRadio"
-                :components="{ BraveField }"
-                @error="(e) => handleError(e)"
-              />
+      <h2>Value / Label object</h2>
 
-            </div>
+      <div class="md:h-96">
+        <VueLive
+          :layout="CustomLayout"
+          :editorProps="{ lineNumbers: true }"
+          :code="codeSfcRadioValueLabel"
+          :components="{ BraveField }"
+          @error="(e) => handleError(e)"
+        />
+      </div>
 
+      <h2>Array of Objects</h2>
 
-          
+      <div class="md:h-96">
+        <VueLive
+          :layout="CustomLayout"
+          :editorProps="{ lineNumbers: true }"
+          :code="codeSfcRadioArrayOfObjects"
+          :components="{ BraveField }"
+          @error="(e) => handleError(e)"
+        />
+      </div>
+      <h3>Array of Objects : How to return one value from the object</h3>
 
+      <p>
+        <code>option-value</code> is used to specify which attribute of the
+        object to return as the value.
+      </p>
 
-          <h3 id="live-example">Live Example</h3>
-            <BrTaTabs class="not-prose" v-bind:tabs="['example','code','stackblitz']" initialTab="example">
-                <template #tab-head-example>Basic Example</template>
-                <template #tab-panel-example>
-                   <client-only> <BraveField/></client-only>
-                </template>
-                <template #tab-head-code>Source Code</template>
-                <template #tab-panel-code>
-                    <BrTaSyntaxHighlighter language="javascript">
-                        <template #title>BraveTabsExample.vue</template>
-                        <template #code>{{`<template>
-  <div class="dark:text-slate-200">
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Text Field</h2>
-      <BraveField
-        type="text"
-        v-model="textValue"
-        placeholder="Enter a Value"
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
+      <div class="md:h-96">
+        <VueLive
+          :layout="CustomLayout"
+          :editorProps="{ lineNumbers: true }"
+          :code="codeSfcRadioArrayOfObjectsSingleValue"
+          :components="{ BraveField }"
+          @error="(e) => handleError(e)"
+        />
+      </div>
+
+      <p>
+        Note: if option-value is not specified then the entire object is
+        returned.
+      </p>
+
+      <h3>Select Label and Value Attribute</h3>
+
+      <p>
+        <code>option-value</code> is used to specify which attribute of the
+        object to return as the value.
+      </p>
+      <p>
+        <code>option-label</code> is used to specify which attribute of the
+        object to return as the label.
+      </p>
+
+      <div class="md:h-96">
+        <VueLive
+          :layout="CustomLayout"
+          :editorProps="{ lineNumbers: true }"
+          :code="codeSfcRadioChooseValueAndLabelAttribute"
+          :components="{ BraveField }"
+          @error="(e) => handleError(e)"
+        />
+      </div>
+
+      <p>
+        Note: if option-value is not specified then the entire object is
+        returned.
+      </p>
+
+      <h2>Props</h2>
+      <ul>
+        <li>
+          <strong>modelValue</strong>: The value of the selected radio button.
+          This can be a string or object.
+          <ul>
+            <li>Type: String, Object</li>
+            <li>Default: ''</li>
+          </ul>
+        </li>
+        <li>
+          <strong>options</strong>: The list of options to be rendered as radio
+          buttons.
+          <ul>
+            <li>Type: Array, Object</li>
+            <li>Default: []</li>
+          </ul>
+        </li>
+        <li>
+          <strong>optionLabel</strong>: The name of the option property used for
+          the radio button label.
+          <ul>
+            <li>Type: String</li>
+            <li>Default: 'label'</li>
+          </ul>
+        </li>
+        <li>
+          <strong>optionValue</strong>: The name of the option property used for
+          the radio button value.
+          <ul>
+            <li>Type: String</li>
+            <li>Default: null</li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Textarea</h2>
-      <BraveField
-        type="textarea"
-        v-model="textValue"
-        placeholder="This is my first field. "
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
-    </div>
-
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Select with Text Array</h2>
-      <BraveField
-        type="select"
-        :options="['Orange', 'Grapes', 'Apple', 'Banana']"
-        v-model="selectValue1"
-        placeholder="This is my first field. "
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
-    </div>
-
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Select with Object</h2>
-      <BraveField
-        type="select"
-        :options="{
-          mercury: 'Mercury',
-          venus: 'Venus',
-          earth: 'Earth',
-          mars: 'Mars',
-          jupiter: 'Jupiter',
-          saturn: 'Saturn',
-          uranus: 'Uranus',
-          neptune: 'Neptune',
-        }"
-        v-model="selectValue2"
-        placeholder="This is my first field. "
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
-    </div>
-
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Select Array of Objects</h2>
-      <BraveField
-        type="select"
-        :options="[
-          { label: 'France', value: 'fr', attrs: { disabled: true } },
-          { label: 'Germany', value: 'de', attrs: { disabled: true } },
-          { label: 'Spain', value: 'es', attrs: { disabled: true } },
-          { label: 'Italy', value: 'ie' },
-          { label: 'Greece', value: 'gr', attrs: { disabled: true } },
-        ]"
-        v-model="selectValue3"
-        placeholder="This is my first field. "
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
-    </div>
-
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Radio</h2>
-      <BraveField
-        type="radio"
-        :options="[
-          { label: 'France', value: 'fr', attrs: { disabled: true } },
-          { label: 'Germany', value: 'de', attrs: { disabled: true } },
-          { label: 'Spain', value: 'es', attrs: { disabled: true } },
-          { label: 'Italy', value: 'ie' },
-          { label: 'Greece', value: 'gr', attrs: { disabled: true } },
-        ]"
-        v-model="selectValue3"
-        class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-      />
-    </div>
-
-    <div class="mb-4">
-      <h2 class="text-md mb-1">Checkbox</h2>
-      <BraveField type="checkbox" v-model="booleanVal" class="border" />
-    </div>
-  </div>
+  </main>
 </template>
-
 <script>
-import { BraveField } from "bravevue";
+import { VueLive } from "vue-live";
+// import the css separately for easier SSR
+import "vue-live/style.css";
+import "prismjs/themes/prism-tomorrow.css";
+import { markRaw } from "vue";
+import CustomLayout from "@/components/VueLiveLayout.vue";
+import codeSfcRadioSimpleArray from "@/components/uiexamples/BraveField/BraveRadioSimpleArray.vue?raw";
+import codeSfcRadioValueLabel from "@/components/uiexamples/BraveField/BraveRadioValueLabel.vue?raw";
+import codeSfcRadioArrayOfObjects from "@/components/uiexamples/BraveField/BraveRadioArrayOfObjects.vue?raw";
+import codeSfcRadioArrayOfObjectsSingleValue from "@/components/uiexamples/BraveField/BraveRadioArrayOfObjectsSelectSingleValue.vue?raw";
+import codeSfcRadioChooseValueAndLabelAttribute from "@/components/uiexamples/BraveField/BraveRadioChooseValueAndLabelAttribute.vue?raw";
+import BraveField from "@/components/uiexamples/BraveField.vue";
+import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
+import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
+import { useHead } from "@vueuse/head";
+
 export default {
-  components: { BraveField },
-  name: "BraveFieldDemo",
   data() {
     return {
-      booleanVal: false,
-      textValue: "Default Value",
-      selectValue1: "Pizza",
-      selectValue2: "venus",
-      selectValue3: "gr",
+      CustomLayout: markRaw(CustomLayout),
+      codeSfcRadioSimpleArray,
+      codeSfcRadioValueLabel,
+      codeSfcRadioArrayOfObjects,
+      codeSfcRadioArrayOfObjectsSingleValue,
+      codeSfcRadioChooseValueAndLabelAttribute,
     };
+  },
+  mounted() {
+    useHead({
+      title: "Form Field Component for Vue 3 | Brave Components Library.",
+      meta: [
+        {
+          name: "description",
+          content:
+            "BraveField allows you to quickly build a HTML form currently it contains fields for text, textarea, select, radio and checkbox.",
+        },
+        {
+          name: "keywords",
+          content:
+            "Fields Builder,Form Field Compnent, Component, Vue3, BraveVue, Javascript, Radio, Select, Textarea, checkbox ",
+        },
+        {
+          name: "author",
+          content: "Shishir Raven",
+        },
+      ],
+    });
+  },
+  methods: {
+    handleError(err) {
+      console.log(err);
+    },
+  },
+  components: {
+    VueLive,
+    BraveField,
+    BrTaSyntaxHighlighter,
+    BrTaTabs,
   },
 };
 </script>
-`}}
-                        </template>
-                    </BrTaSyntaxHighlighter>
-                </template>
-  
-  
-                <template #tab-head-stackblitz>⚡StackBlitz</template>
-                <template #tab-panel-stackblitz>
-                  <!-- tailwind iframe full width and height -->
-                  <iframe src="https://stackblitz.com/edit/vitejs-vite-gtpsbt?embed=1&file=src/components/BraveField.vue&view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" allowfullscreen="allowfullscreen" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-                </template>
-  
-            </BrTaTabs>
-  
-      
-        </div>
-    </main>
-  </template>
-  <script>
-  import { VueLive } from "vue-live";
-   // import the css separately for easier SSR
-  import "vue-live/style.css";
-  //  import "vue-live/lib/vue-live.esm.css";
-   import "prismjs/themes/prism-tomorrow.css";
-   import {  markRaw } from "vue";
-   import CustomLayout from "@/components/VueLiveLayout.vue";
-   
-
-
-
-
-//    import codeSfcRadio from  "@/components/uiexamples/BraveField/BraveRadio.vue?raw";
-   import codeSfcRadio from  "@/components/uiexamples/BraveField/BraveRadioSimpleArray.vue?raw";
-  import BraveField from "@/components/uiexamples/BraveField.vue";
-  import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
-  import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
-  import { useHead } from "@vueuse/head"
-
-export default {
-    data() {
-        return {
-            CustomLayout: markRaw(CustomLayout),
-            codeSfcRadio,
-        };
-    },
-  mounted(){
-    useHead({
-            title: "Form Field Component for Vue 3 | Brave Components Library.",
-            meta: [
-                {
-                    name: "description",
-                    content: "BraveField allows you to quickly build a HTML form currently it contains fields for text, textarea, select, radio and checkbox.",
-                },
-                {
-                    name: "keywords",
-                    content: "Fields Builder,Form Field Compnent, Component, Vue3, BraveVue, Javascript, Radio, Select, Textarea, checkbox ",
-                },
-                {
-                    name: "author",
-                    content: "Shishir Raven",
-                },
-            ],
-        })
-  },
-      methods : {
-        handleError(err) {
-          console.log(err);
-        },
-      },
-    components: {
-      VueLive,
-      BraveField,
-      BrTaSyntaxHighlighter,
-      BrTaTabs,
-  },
-  };
-  </script>
-  

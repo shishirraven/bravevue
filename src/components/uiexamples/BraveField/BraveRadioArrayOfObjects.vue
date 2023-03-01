@@ -5,14 +5,12 @@
       <BraveField
         type="radio"
         :options="[
-          'Mercury',
-          'Venus',
-          'Earth',
-          'Mars',
-          'Jupiter',
-          'Saturn',
-          'Uranus',
-          'Neptune',
+          { label: 'India', value: 'in' },
+          { label: 'France', value: 'fr' },
+          { label: 'Germany', value: 'de' },
+          { label: 'Spain', value: 'es' },
+          { label: 'Italy', value: 'ie' },
+          { label: 'Greece', value: 'gr' },
         ]"
         v-model="value"
       />
@@ -26,7 +24,7 @@
 export default {
   data() {
     return {
-      value: "Mercury",
+      value: { label: 'India', value: 'in' },
     };
   },
 };

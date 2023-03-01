@@ -4,16 +4,16 @@
       <h2 class="text-md mb-1">Select with Object</h2>
       <BraveField
         type="radio"
-        :options="[
-          'Mercury',
-          'Venus',
-          'Earth',
-          'Mars',
-          'Jupiter',
-          'Saturn',
-          'Uranus',
-          'Neptune',
-        ]"
+        :options="{
+          mercury: 'Mercury',
+          venus: 'Venus',
+          earth: 'Earth',
+          mars: 'Mars',
+          jupiter: 'Jupiter',
+          saturn: 'Saturn',
+          uranus: 'Uranus',
+          neptune: 'Neptune',
+        }"
         v-model="value"
       />
     </div>
@@ -26,7 +26,7 @@
 export default {
   data() {
     return {
-      value: "Mercury",
+      value: "mercury",
     };
   },
 };
