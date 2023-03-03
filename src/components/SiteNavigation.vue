@@ -147,6 +147,27 @@
         from-yellow-100 via-yellow-300 to-yellow-500"></i>
         <div class="ml-2">Radio</div>
     </router-link>
+
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/bravefield_select" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-menu-button-wide
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Native Select</div>
+    </router-link>
+
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/bravefield_checkbox_group" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-ui-checks
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Checkbox Group</div>
+    </router-link>
+
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/bravefield_checkbox" class="flex items-center p-3 ">
+        <i class="bi me-2 text-xl bi-ui-checks
+        dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Checkbox </div>
+    </router-link>
     
     <div class="text-sm tracking-wider py-4">DIRECTIVES</div>
 

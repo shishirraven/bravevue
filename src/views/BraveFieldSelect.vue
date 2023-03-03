@@ -1,10 +1,10 @@
 <template>
   <main class="flex-1 p-4 lg:p-10 lg:pt-16">
     <div class="prose prose-slate max-w-none dark:prose-invert">
-      <h1 id="introduction"><i class="bi bi-ui-radios"></i> Radio</h1>
+      <h1 id="introduction"><i class="bi bi-menu-button-wide"></i> Select Native</h1>
 
       <p>
-        Uses native radio. You can build by passing options in following 3 Ways.
+        Uses native select. You can build by passing options in following 3 Ways.
       </p>
       <ol>
         <li>Array of strings</li>
@@ -19,7 +19,7 @@
         <VueLive
           :layout="CustomLayout"
           :editorProps="{ lineNumbers: true }"
-          :code="codeSfcRadioSimpleArray"
+          :code="codeSfcSelectSimpleArray"
           :components="{ BraveField }"
           @error="(e) => handleError(e)"
         />
@@ -31,7 +31,7 @@
         <VueLive
           :layout="CustomLayout"
           :editorProps="{ lineNumbers: true }"
-          :code="codeSfcRadioValueLabel"
+          :code="codeSfcSelectValueLabel"
           :components="{ BraveField }"
           @error="(e) => handleError(e)"
         />
@@ -43,7 +43,7 @@
         <VueLive
           :layout="CustomLayout"
           :editorProps="{ lineNumbers: true }"
-          :code="codeSfcRadioArrayOfObjects"
+          :code="codeSfcSelectArrayOfObjects"
           :components="{ BraveField }"
           @error="(e) => handleError(e)"
         />
@@ -59,7 +59,7 @@
         <VueLive
           :layout="CustomLayout"
           :editorProps="{ lineNumbers: true }"
-          :code="codeSfcRadioArrayOfObjectsSingleValue"
+          :code="codeSfcSelectArrayOfObjectsSingleValue"
           :components="{ BraveField }"
           @error="(e) => handleError(e)"
         />
@@ -85,7 +85,7 @@
         <VueLive
           :layout="CustomLayout"
           :editorProps="{ lineNumbers: true }"
-          :code="codeSfcRadioChooseValueAndLabelAttribute"
+          :code="codeSfcSelectChooseValueAndLabelAttribute"
           :components="{ BraveField }"
           @error="(e) => handleError(e)"
         />
@@ -99,7 +99,7 @@
       <h2>Props</h2>
       <ul>
         <li>
-          <strong>modelValue</strong>: The value of the selected radio button.
+          <strong>modelValue</strong>: The value of the selected Option.
           This can be a string or object.
           <ul>
             <li>Type: String, Object</li>
@@ -107,8 +107,7 @@
           </ul>
         </li>
         <li>
-          <strong>options</strong>: The list of options to be rendered as radio
-          buttons.
+          <strong>options</strong>: The list of options to be rendered as select options
           <ul>
             <li>Type: Array, Object</li>
             <li>Default: []</li>
@@ -116,7 +115,7 @@
         </li>
         <li>
           <strong>optionLabel</strong>: The name of the option property used for
-          the radio button label.
+          the select option.
           <ul>
             <li>Type: String</li>
             <li>Default: 'label'</li>
@@ -124,7 +123,7 @@
         </li>
         <li>
           <strong>optionValue</strong>: The name of the option property used for
-          the radio button value.
+          the select option value.
           <ul>
             <li>Type: String</li>
             <li>Default: null</li>
@@ -141,11 +140,11 @@ import "vue-live/style.css";
 import "prismjs/themes/prism-tomorrow.css";
 import { markRaw } from "vue";
 import CustomLayout from "@/components/VueLiveLayout.vue";
-import codeSfcRadioSimpleArray from "@/components/uiexamples/BraveField/BraveRadioSimpleArray.vue?raw";
-import codeSfcRadioValueLabel from "@/components/uiexamples/BraveField/BraveRadioValueLabel.vue?raw";
-import codeSfcRadioArrayOfObjects from "@/components/uiexamples/BraveField/BraveRadioArrayOfObjects.vue?raw";
-import codeSfcRadioArrayOfObjectsSingleValue from "@/components/uiexamples/BraveField/BraveRadioArrayOfObjectsSelectSingleValue.vue?raw";
-import codeSfcRadioChooseValueAndLabelAttribute from "@/components/uiexamples/BraveField/BraveRadioChooseValueAndLabelAttribute.vue?raw";
+import codeSfcSelectSimpleArray from "@/components/uiexamples/BraveField/BraveSelectSimpleArray.vue?raw";
+import codeSfcSelectValueLabel from "@/components/uiexamples/BraveField/BraveSelectValueLabel.vue?raw";
+import codeSfcSelectArrayOfObjects from "@/components/uiexamples/BraveField/BraveSelectArrayOfObjects.vue?raw";
+import codeSfcSelectArrayOfObjectsSingleValue from "@/components/uiexamples/BraveField/BraveSelectArrayOfObjectsSelectSingleValue.vue?raw";
+import codeSfcSelectChooseValueAndLabelAttribute from "@/components/uiexamples/BraveField/BraveSelectChooseValueAndLabelAttribute.vue?raw";
 import BraveField from "@/components/uiexamples/BraveField.vue";
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
@@ -155,26 +154,26 @@ export default {
   data() {
     return {
       CustomLayout: markRaw(CustomLayout),
-      codeSfcRadioSimpleArray,
-      codeSfcRadioValueLabel,
-      codeSfcRadioArrayOfObjects,
-      codeSfcRadioArrayOfObjectsSingleValue,
-      codeSfcRadioChooseValueAndLabelAttribute,
+      codeSfcSelectSimpleArray,
+      codeSfcSelectValueLabel,
+      codeSfcSelectArrayOfObjects,
+      codeSfcSelectArrayOfObjectsSingleValue,
+      codeSfcSelectChooseValueAndLabelAttribute,
     };
   },
   mounted() {
     useHead({
-      title: "Form Field Component for Vue 3 | Brave Components Library.",
+      title: "Form Field Select Component for Vue 3 | Brave Components Library.",
       meta: [
         {
           name: "description",
           content:
-            "BraveField allows you to quickly build a HTML form currently it contains fields for text, textarea, select, radio and checkbox.",
+            "BraveField type select allows you to build a select field with options from an array of strings or an array of objects.",
         },
         {
           name: "keywords",
           content:
-            "Fields Builder,Form Field Compnent, Component, Vue3, BraveVue, Javascript, Radio, Select, Textarea, checkbox ",
+            "vue3, vue3 components, vue3 form, vue3 form field, vue3 select, vue3 select field, vue3 select component, vue3 select field component, vue3",
         },
         {
           name: "author",

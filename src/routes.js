@@ -26,8 +26,23 @@ export const routes = [
   },
   {
     path: "/bravefield_radio",
-    meta: { title: "Brave Block Tree" },
+    meta: { title: "BraveField: Radio" },
     component: () => import("./views/BraveFieldRadio.vue"),
+  },
+  {
+    path: "/bravefield_select",
+    meta: { title: "BraveField: Select" },
+    component: () => import("./views/BraveFieldSelect.vue"),
+  },
+  {
+    path: "/bravefield_checkbox_group",
+    meta: { title: "BraveField: Checkbox" },
+    component: () => import("./views/BraveFieldCheckboxGroup.vue"),
+  },
+  {
+    path: "/bravefield_checkbox",
+    meta: { title: "BraveField: Checkbox" },
+    component: () => import("./views/BraveFieldCheckbox.vue"),
   },
   {
     path: "/brave_sidebar_layout",

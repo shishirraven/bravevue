@@ -8,7 +8,7 @@
     </div>
     <BraveBottomSheet
       class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl "
-      :state="state"
+      v-model:state="state"
       sheet-close="10%"
       sheet-half-open="50%"
       sheet-full-open="90%"
