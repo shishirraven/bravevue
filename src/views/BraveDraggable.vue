@@ -4,6 +4,7 @@
   <main class="flex-1 lg:p-16">
     <BraveDraggable 
         class=""
+        :toggleSelectDeselect="false"
         :isSelectable="true"
         :automaticDocking="true"
         :rotatable="true"
@@ -28,7 +29,7 @@
                 class="cursor-move bg-indigo-900 px-5 py-2 rounded-t-lg flex  gap-x-2">
                 <!-- bootstrap move icon -->
                 <i class="bi bi-arrows-move"></i>
-                Demo Draggable Window 
+                Demo Draggable Window, hey
             </div>
 
             <!-- CONTENT 234 -->

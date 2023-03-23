@@ -25,6 +25,11 @@ export const routes = [
     component: () => import("./views/BraveBlockTree.vue"),
   },
   {
+    path: "/brave_context_bar",
+    meta: { title: "Brave Context Bar" },
+    component: () => import("./views/BraveContextBar.vue"),
+  },
+  {
     path: "/bravefield_radio",
     meta: { title: "BraveField: Radio" },
     component: () => import("./views/BraveFieldRadio.vue"),
