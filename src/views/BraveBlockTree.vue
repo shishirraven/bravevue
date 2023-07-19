@@ -42,152 +42,132 @@
         <template #tab-head-code>Source Code</template>
         <template #tab-panel-code>
           <BrTaSyntaxHighlighter language="javascript">
-            <template #title>BraveTabsExample.vue</template>
+            <template #title>BraveTree.vue</template>
             <template #code
               >{{`<template>
-                <div class="dark:text-slate-200">
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Text Field</h2>
-                    <BraveField
-                      type="text"
-                      v-model="textValue"
-                      placeholder="Enter a Value"
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Textarea</h2>
-                    <BraveField
-                      type="textarea"
-                      v-model="textValue"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
+  <div class="mb-3 text-xl">Demo for Nested Elements</div>
+  <div class="text-lg">Preview</div>
+  <div contenteditable="true" class="prose p-10 dark:prose-invert">
+    <!-- RICHTEXT TOOLBAR -->
+    <ToolbarLink contenteditable="false" ref="linkToolBar" />
+    <ToolBarRich
+      contenteditable="false"
+      @show-link-toolbar="$refs.linkToolBar.showToolBar()"
+    />
+    <ToolbarPreviewLink
+      contenteditable="false"
+      @show-link-toolbar="$refs.linkToolBar.showToolBar()"
+    />
+    <BraveBlockTree ref="rootElmt" v-model="seedData"></BraveBlockTree>
+  </div>
+  <div class="text-lg">Component Tree JSON</div>
+  <code>
+    <pre class="wrap w-full overflow-auto rounded bg-slate-900 p-2">\{\{
+      seedData
+    \}\}</pre>
+  </code>
 
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Select with Text Array</h2>
-                    <BraveField
-                      type="select"
-                      :options="['Orange', 'Grapes', 'Apple', 'Banana']"
-                      v-model="selectValue1"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Select with Object</h2>
-                    <BraveField
-                      type="select"
-                      :options="{
-                        mercury: 'Mercury',
-                        venus: 'Venus',
-                        earth: 'Earth',
-                        mars: 'Mars',
-                        jupiter: 'Jupiter',
-                        saturn: 'Saturn',
-                        uranus: 'Uranus',
-                        neptune: 'Neptune',
-                      }"
-                      v-model="selectValue2"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Select Array of Objects</h2>
-                    <BraveField
-                      type="select"
-                      :options="[
-                        {
-                          label: 'France',
-                          value: 'fr',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Germany',
-                          value: 'de',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Spain',
-                          value: 'es',
-                          attrs: { disabled: true },
-                        },
-                        { label: 'Italy', value: 'ie' },
-                        {
-                          label: 'Greece',
-                          value: 'gr',
-                          attrs: { disabled: true },
-                        },
-                      ]"
-                      v-model="selectValue3"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Radio</h2>
-                    <BraveField
-                      type="radio"
-                      :options="[
-                        {
-                          label: 'France',
-                          value: 'fr',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Germany',
-                          value: 'de',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Spain',
-                          value: 'es',
-                          attrs: { disabled: true },
-                        },
-                        { label: 'Italy', value: 'ie' },
-                        {
-                          label: 'Greece',
-                          value: 'gr',
-                          attrs: { disabled: true },
-                        },
-                      ]"
-                      v-model="selectValue3"
-                      class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Checkbox</h2>
-                    <BraveField
-                      type="checkbox"
-                      v-model="booleanVal"
-                      class="border"
-                    />
-                  </div>
-                </div>
-              </template>
-
-              <script>
-                import { BraveField } from "bravevue";
-                export default {
-                  components: { BraveField },
-                  name: "BraveFieldDemo",
-                  data() {
-                    return {
-                      booleanVal: false,
-                      textValue: "Default Value",
-                      selectValue1: "Pizza",
-                      selectValue2: "venus",
-                      selectValue3: "gr", // Greece
-                    };
+  <div class="my-5 text-lg">HTML Output Generated from Tree</div>
+  <button
+    @click="getHTML()"
+    class="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-red-100 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 dark:focus:ring-red-400"
+  >
+    <span
+      class="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900"
+    >
+      Generate HTML
+    </span>
+  </button>
+  <textarea
+    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+    name=""
+    id=""
+    cols="10"
+    rows="5"
+    :value="TreeHtml"
+  ></textarea>
+</template>
+<script>
+import { BraveBlockTree, BraveBlockElement } from "bravevue";
+export default {
+  components: { BraveBlockTree, BraveBlockElement },
+  methods: {
+    getHTML() {
+      this.TreeHtml = this.$refs.rootElmt.getHTML();
+    },
+  },
+  data() {
+    return {
+      TreeHtml: "",
+      seedData: [
+        {
+          component: "BraveBlockText",
+          data: {
+            selfData: {
+              content: "New.",
+              class: "text-lg",
+              tag: "div",
+            },
+            childData: {},
+          },
+        },
+        {
+          component: "BraveBlockElement",
+          data: {
+            selfData: {
+              class: "border-red-600 border-2 border-dashed p-5 my-2  ",
+            },
+            childData: [
+              {
+                component: "BraveBlockText",
+                data: {
+                  selfData: {
+                    content: "Some Starting text.",
+                    class: "text-lg",
+                    tag: "div",
                   },
-                };
-              </script>
+                  childData: {},
+                },
+              },
+              {
+                component: "BraveBlockText",
+                data: {
+                  selfData: {
+                    content: "Some Starting text.",
+                    class: "text-lg",
+                    tag: "div",
+                  },
+                  childData: {},
+                },
+              },
+              {
+                component: "BraveBlockElement",
+                data: {
+                  selfData: {
+                    class: "border-green-500 border-2 border-dashed p-5 m-2 ",
+                  },
+                  childData: [],
+                },
+              },
+
+              {
+                component: "BraveBlockElement",
+                data: {
+                  selfData: {
+                    class: "border-yellow-500 border-2 border-dashed p-5 my-2 ",
+                  },
+                  childData: [],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+  },
+};
+</script>
+
               `}}
             </template>
           </BrTaSyntaxHighlighter>
@@ -267,152 +247,88 @@
         <template #tab-head-code>Source Code</template>
         <template #tab-panel-code>
           <BrTaSyntaxHighlighter language="javascript">
-            <template #title>BraveTabsExample.vue</template>
+            <template #title>BraveTree.vue</template>
             <template #code
               >{{`<template>
-                <div class="dark:text-slate-200">
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Text Field</h2>
-                    <BraveField
-                      type="text"
-                      v-model="textValue"
-                      placeholder="Enter a Value"
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Textarea</h2>
-                    <BraveField
-                      type="textarea"
-                      v-model="textValue"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
+  <div class="mb-3 text-xl">Demo for Nested Elements</div>
 
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Select with Text Array</h2>
-                    <BraveField
-                      type="select"
-                      :options="['Orange', 'Grapes', 'Apple', 'Banana']"
-                      v-model="selectValue1"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
+  <div class="text-lg">Preview</div>
+  <BraveBlockTree ref="rootElmt" v-model="seedData"></BraveBlockTree>
+  <div class="text-lg">Component Tree JSON</div>
+  <code>
+    <pre class="wrap w-full overflow-auto rounded bg-slate-900 p-2">\{\{
+      seedData
+    \}\}</pre>
+  </code>
 
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Select with Object</h2>
-                    <BraveField
-                      type="select"
-                      :options="{
-                        mercury: 'Mercury',
-                        venus: 'Venus',
-                        earth: 'Earth',
-                        mars: 'Mars',
-                        jupiter: 'Jupiter',
-                        saturn: 'Saturn',
-                        uranus: 'Uranus',
-                        neptune: 'Neptune',
-                      }"
-                      v-model="selectValue2"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Select Array of Objects</h2>
-                    <BraveField
-                      type="select"
-                      :options="[
-                        {
-                          label: 'France',
-                          value: 'fr',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Germany',
-                          value: 'de',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Spain',
-                          value: 'es',
-                          attrs: { disabled: true },
-                        },
-                        { label: 'Italy', value: 'ie' },
-                        {
-                          label: 'Greece',
-                          value: 'gr',
-                          attrs: { disabled: true },
-                        },
-                      ]"
-                      v-model="selectValue3"
-                      placeholder="This is my first field. "
-                      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Radio</h2>
-                    <BraveField
-                      type="radio"
-                      :options="[
-                        {
-                          label: 'France',
-                          value: 'fr',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Germany',
-                          value: 'de',
-                          attrs: { disabled: true },
-                        },
-                        {
-                          label: 'Spain',
-                          value: 'es',
-                          attrs: { disabled: true },
-                        },
-                        { label: 'Italy', value: 'ie' },
-                        {
-                          label: 'Greece',
-                          value: 'gr',
-                          attrs: { disabled: true },
-                        },
-                      ]"
-                      v-model="selectValue3"
-                      class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-                    />
-                  </div>
-
-                  <div class="mb-4">
-                    <h2 class="text-md mb-1">Checkbox</h2>
-                    <BraveField
-                      type="checkbox"
-                      v-model="booleanVal"
-                      class="border"
-                    />
-                  </div>
-                </div>
-              </template>
-
-              <script>
-                import { BraveField } from "bravevue";
-                export default {
-                  components: { BraveField },
-                  name: "BraveFieldDemo",
-                  data() {
-                    return {
-                      booleanVal: false,
-                      textValue: "Default Value",
-                      selectValue1: "Pizza",
-                      selectValue2: "venus",
-                      selectValue3: "gr",
-                    };
+  <div class="my-5 text-lg">HTML Output Generated from Tree</div>
+  <button
+    @click="getHTML()"
+    class="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-red-100 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 dark:focus:ring-red-400"
+  >
+    <span
+      class="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900"
+    >
+      Generate HTML
+    </span>
+  </button>
+  <textarea
+    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+    name=""
+    id=""
+    cols="10"
+    rows="5"
+    :value="TreeHtml"
+  ></textarea>
+</template>
+<script>
+import { BraveBlockTree, BraveBlockElement } from "bravevue";
+export default {
+  components: { BraveBlockTree, BraveBlockElement },
+  methods: {
+    getHTML() {
+      this.TreeHtml = this.$refs.rootElmt.getHTML();
+    },
+  },
+  data() {
+    return {
+      TreeHtml: "",
+      seedData: [
+        {
+          component: "BraveBlockElement",
+          data: {
+            selfData: {
+              class:
+                "border-red-600 border-2 border-dashed p-5 my-2 flex flex-divide ",
+            },
+            childData: [
+              {
+                component: "BraveBlockElement",
+                data: {
+                  selfData: {
+                    class: "border-green-500 border-2 border-dashed p-5 my-2 ",
                   },
-                };
-              </script>
+                  childData: {},
+                },
+              },
+              {
+                component: "BraveBlockElement",
+                data: {
+                  selfData: {
+                    class: "border-yellow-500 border-2 border-dashed p-5 my-2 ",
+                  },
+                  childData: {},
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+  },
+};
+</script>
+
               `}}
             </template>
           </BrTaSyntaxHighlighter>
