@@ -59,7 +59,7 @@
 
   <!-- Profile Image and Icon -->
   <div class="flex flex-col items-center justify-center bg-slate-800 p-5">
-    <img class="h-24 w-24" src="http://localhost:5173/src/assets/images/shishir_profie.png" alt="" />
+    <img class="h-24 w-24" src="@/assets/images/shishir_profie.png" alt="" />
     <div class="mt-5 text-2xl font-semibold text-white">Shishir Raven</div>
     <div class="mt-1 text-sm text-slate-400">shishir.raven@gmail.com</div>
   </div>
