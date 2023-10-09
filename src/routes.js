@@ -77,6 +77,15 @@ export const routes = [
     component: () => import("./views/BraveBottomSheet.vue"),
   },
   {
+    path: "/brave-side-sheet",
+    meta: { title: "Brave SideSheet" },
+    //component: BraveSidebarLayout,
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("./views/BraveSideSheet.vue"),
+  },
+  {
     path: "/touch-swipe-up",
     meta: { title: "Touch Swipe Up" },
     //component: BraveSidebarLayout,
