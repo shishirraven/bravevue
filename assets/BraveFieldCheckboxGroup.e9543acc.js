@@ -1,4 +1,4 @@
-import{D as i,C as c}from"./VueLiveLayout.280eb2a5.js";import{B as d}from"./BraveField.3e2bbb0f.js";import{_ as p,m as b,u as h,e as v,f as m,c as f,d as e,b as s,h as u,g as y,r as x,o as _}from"./index.940d2670.js";const g=`<template>
+import{D as i,C as c}from"./VueLiveLayout.b0686112.js";import{B as d}from"./BraveField.3ae42152.js";import{_ as p,m as b,u as h,e as v,f as m,c as f,d as e,b as s,h as u,g as y,r as x,o as _}from"./index.f6e566c6.js";const g=`<template>
   <div class="flex h-full flex-col">
     <div class="grow overflow-auto p-5">
       <h2 class="text-md mb-1">Select with Object</h2>

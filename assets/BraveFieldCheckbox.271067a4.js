@@ -1,4 +1,4 @@
-import{D as i,C as a}from"./VueLiveLayout.280eb2a5.js";import{B as u}from"./BraveField.3e2bbb0f.js";import{_ as c,m as d,u as p,e as h,f as b,c as m,d as e,b as f,h as v,g,r as x,o as y}from"./index.940d2670.js";const _=`<template>
+import{D as i,C as a}from"./VueLiveLayout.b0686112.js";import{B as u}from"./BraveField.3ae42152.js";import{_ as c,m as d,u as p,e as h,f as b,c as m,d as e,b as f,h as v,g,r as x,o as y}from"./index.f6e566c6.js";const _=`<template>
   <div class="flex h-full flex-col">
     <div class="grow overflow-auto p-5">
       <BraveField
