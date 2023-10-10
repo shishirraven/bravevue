@@ -50,7 +50,7 @@
                 Brave Side Sheet opens a panel from the right side of the screen. 
             </p>
             <p>
-                Bottom Sheets has a backdrop, and automaticaly closes when you click outside of it. You can style the bottom sheet with your own CSS classes.
+                Side Sheets has a backdrop, and automaticaly closes when you click outside of it. You can style the side sheet with your own CSS classes.
             </p>
         <h3 id="live-example">Live Example</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code']" initialTab="example">
@@ -66,7 +66,7 @@
                       <template #code>{{`<template>
   <!-- Buttons to change the Sheets State to closed,half,full -->
   <div class="mt-3 flex flex-col gap-2 lg:flex-row">
-    <!-- <button @click="state = 'closed'" type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Close Bottom Sheet</button> -->
+    <!-- <button @click="state = 'closed'" type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Close Side Sheet</button> -->
     <button
       @click="state = 'open'"
       type="button"
@@ -439,11 +439,11 @@ import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
 import BraveSideSheet from "@/components/uiexamples/BraveSideSheet.vue";
 import { useHead } from "@vueuse/head"
 useHead({
-            title: "Bottom Sheet for Vue 3 | Brave Vue",
+            title: "Side Sheet for Vue 3 | Brave Vue",
             meta: [
                 {
                     name: "description",
-                    content: "BraveVue Bottom Sheet for Vue 3. A Bottom Sheet Headless Component for Vue 3",
+                    content: "BraveVue Side Sheet for Vue 3. A Side Sheet Headless Component for Vue 3",
                 },
             ],
         });
