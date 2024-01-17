@@ -19,6 +19,13 @@
         <div class="ml-2">Tabs </div>
     </router-link>  
 
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_notification" class="flex items-center p-3 ">
+        <i class="bi bi-bell  
+        dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Brave Notification </div>
+    </router-link>  
+
     <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave-side-sheet" class="flex items-center p-3 ">
         <i class="bi  bi-layout-sidebar-reverse  
         dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 

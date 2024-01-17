@@ -9,6 +9,7 @@ import BraveGist from "./views/BraveGist.vue";
 import BraveSelect from "./views/BraveSelect.vue";
 import BraveTabs from "./views/BraveTabs.vue";
 import BraveSlider from "./views/BraveSlider.vue";
+import BraveNotification from "./views/BraveNotification.vue";
 import BraveSyntaxHighlighter from "./views/BraveSyntaxHighLighter.vue";
 // import BraveRadio from "./views/BraveRadio.vue";
 //import BraveDraggable from "./views/BraveDraggable.vue";
@@ -33,6 +34,11 @@ export const routes = [
     path: "/bravefield_radio",
     meta: { title: "BraveField: Radio" },
     component: () => import("./views/BraveFieldRadio.vue"),
+  },
+  {
+    path: "/brave_notification",
+    meta: { title: "BraveNotification: " },
+    component: () => import("./views/BraveNotification.vue"),
   },
   {
     path: "/bravefield_select",
