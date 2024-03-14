@@ -9,7 +9,7 @@
   "dependencies": {
     "@vueuse/head": "^1.0.22",
     "bootstrap-icons": "^1.8.2",
-    "bravevue": "file:../bravevue_npm",
+    "bravevue": "^0.2.97",
     "uuid": "^8.3.2",
     "vite": "^3.1.4",
     "vue": "^3.2.40",
