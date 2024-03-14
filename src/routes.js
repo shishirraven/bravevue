@@ -15,6 +15,7 @@ import BraveSyntaxHighlighter from "./views/BraveSyntaxHighLighter.vue";
 //import BraveDraggable from "./views/BraveDraggable.vue";
 //import BraveNumberInput from "./views/BraveNumberInput.vue";
 import RequestAComponent from "./views/RequestAComponent.vue";
+import BraveRichToolBar from "./views/BraveRichToolBar.vue";
 
 
 /** @type {import('vue-router').RouterOptions['routes']} */
@@ -24,6 +25,11 @@ export const routes = [
     path: "/brave_block_tree",
     meta: { title: "Brave Block Tree" },
     component: () => import("./views/BraveBlockTree.vue"),
+  },
+  {
+    path: "/brave_rich_toolbar",
+    meta: { title: "Brave Rich Toolbar" },
+    component: BraveRichToolBar,
   },
   {
     path: "/brave_context_bar",

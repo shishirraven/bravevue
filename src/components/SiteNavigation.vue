@@ -26,13 +26,22 @@
         <div class="ml-2">Brave Notification </div>
     </router-link>  
 
+    <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_rich_toolbar" class="flex items-center p-3 ">
+        <i class="bi bi-file-richtext  
+        dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
+        from-yellow-100 via-yellow-300 to-yellow-500"></i>
+        <div class="ml-2">Rich toolbar <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+                    New
+                </span>
+</div>
+    </router-link>
+
     <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave-side-sheet" class="flex items-center p-3 ">
         <i class="bi  bi-layout-sidebar-reverse  
         dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
         from-yellow-100 via-yellow-300 to-yellow-500"></i>
-        <div class="ml-2">Side Sheet <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-                    New
-                </span>
+        <div class="ml-2">Side Sheet 
+          
 </div>
     </router-link>
 
@@ -40,9 +49,7 @@
         <i class="bi bi-layer-forward   
         dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
         from-yellow-100 via-yellow-300 to-yellow-500"></i>
-        <div class="ml-2">Bottom Sheet <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-                    New
-                </span>
+        <div class="ml-2">Bottom Sheet 
 </div>
     </router-link>  
     
@@ -51,9 +58,7 @@
         dark:bg-clip-text dark:text-transparent   dark:bg-gradient-to-r 
         from-yellow-100 via-yellow-300 to-yellow-500"></i>
         <div class="ml-2">Tags 
-            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-                    New
-                </span>
+          
         </div>
     </router-link>  
     
@@ -63,9 +68,7 @@
          from-yellow-100 via-yellow-300 to-yellow-500"></i> 
         <div class="ml-2">Draggable 
                 <!-- small new indicator tailwind -->
-                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-                    New
-                </span>
+               
         </div>
     </router-link>
     <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_radial_menu"  class="flex items-center p-3 ">
@@ -74,9 +77,7 @@
          from-yellow-100 via-yellow-300 to-yellow-500"></i> 
         <div class="ml-2">Radial Menu 
                 <!-- small new indicator tailwind -->
-                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-                    New
-                </span>
+        
         </div>
     </router-link>
      <router-link @click.native="$emit('jumpingToAnchor')"  to="/brave_sidebar_layout"  class="flex items-center p-3 ">
