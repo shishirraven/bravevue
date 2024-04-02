@@ -1,4 +1,4 @@
-import{_ as s,m as l,C as c,u as d,D as p,e as u,f as m,g as h,r as f,o as g,c as v,d as i,b,h as y}from"./index.57ef8c11.js";const w=`<template>
+import{_ as s,m as l,C as c,u as d,D as p,e as u,f as m,g as h,r as f,o as g,c as v,d as i,b,h as y}from"./index.c2747784.js";const w=`<template>
   <div id="app">
     <brave-notification
     ref="braveGrowl"

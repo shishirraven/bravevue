@@ -1,4 +1,4 @@
-import{_ as u,m as c,u as d,D as p,e as v,f as m,g as h,c as b,d as e,b as s,C as f,i,h as y,r as S,o as g}from"./index.57ef8c11.js";const _=`<template>
+import{_ as u,m as c,u as d,D as p,e as v,f as m,g as h,c as b,d as e,b as s,C as f,i,h as y,r as S,o as g}from"./index.c2747784.js";const _=`<template>
   <div class="flex h-full flex-col">
     <div class="grow overflow-auto p-5">
       <h2 class="text-md mb-1">Select with Object</h2>
