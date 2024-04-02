@@ -39,10 +39,26 @@
               `const { createApp } = require('vue');
 import App from "./App.vue";
 import bravevue from 'bravevue'
+import '../node_modules/bravevue/dist/style.css'
 createApp(App).use(bravevue).mount("#app");`
             }}
           </template>
         </BrTaSyntaxHighlighter>
+
+        <!-- Note -->
+        <div class="my-5">
+          <p class="text-lg font-semibold">Note:</p>
+          <p>
+            The bravevue package has  Style file which needs to be included as shown above. 
+            <!-- code -->
+            <code class="bg-gray-100 dark:bg-gray-800 p-1 rounded-md">
+              import '../node_modules/bravevue/dist/style.css'
+            </code>
+          </p>
+
+    </div>
+
+        
       </div>
     </div>
   </main>
