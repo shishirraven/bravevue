@@ -13,9 +13,9 @@
     To use the Brave Notification component, import it into your Vue.js project and include it in your template. Customize the appearance, corner position, and display time as needed.
   </p>
   <pre><code>
-    &lt;brave-growl display-time="2000" corner="top-right"&gt;
+    &lt;BraveNotification display-time="2000" corner="top-right"&gt;
       &lt;div&gt;Your notification message&lt;/div&gt;
-    &lt;/brave-growl&gt;
+    &lt;/BraveNotification&gt;
   </code></pre>
 
   <h2>Props</h2>
