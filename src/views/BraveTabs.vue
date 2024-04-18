@@ -349,6 +349,67 @@ export default {
               </tr>
           </table>
           </div>
+
+          <h2 class="mt-30" id="slots">
+              Emits
+              <a href="#slots" name="slots" class="anchor">
+                  <span class="anchor-target" id="slots"></span>
+                  <span class="glyphicon glyphicon-link"></span>
+              </a>
+          </h2>
+          <div class="overflow-auto w-full">
+          <table>
+              <tr>
+                  <td class="py-4 px-6">
+                      <strong>Name </strong>
+                  </td>
+                  <td class="py-4 px-6">
+                      <strong>Decription </strong>
+                  </td>
+                  <td class="py-4 px-6">
+                      <strong>Usage Example </strong>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="py-4 px-6">@change</td>
+                  <td class="py-4 px-6">
+                    Emits the tab change Object 
+<pre>
+{
+    newTab: newVal, 
+    oldTab: oldVal
+}
+</pre>
+                  </td>
+                  <td class="py-4 px-6">
+                    <p>
+<code ><pre>
+&lt;brave-tabs @change=&quot;handleTabChange&quot; &gt;
+</pre></code>
+
+
+<br>
+<code ><pre>
+methods: {
+    handleTabChange(event) {
+        console.log('Tab changed:', event.newTab, 'from', event.oldTab);
+        // You can perform any actions here based on the tab change event
+        this.selectedTab = event.newTab;
+    },
+},
+</pre></code>
+
+
+
+
+
+
+                    </p>
+                  </td>
+              </tr>
+            
+          </table>
+          </div>
       </div>
   </main>
 </template>
