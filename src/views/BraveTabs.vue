@@ -32,6 +32,10 @@
                       <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                           href="#slots">Slots</a>
                   </li>
+                  <li class>
+                      <a class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                          href="#emits">Emits</a>
+                  </li>
               </ul>
           </div>
       </div>
@@ -350,10 +354,10 @@ export default {
           </table>
           </div>
 
-          <h2 class="mt-30" id="slots">
+          <h2 class="mt-30" id="emits">
               Emits
-              <a href="#slots" name="slots" class="anchor">
-                  <span class="anchor-target" id="slots"></span>
+              <a href="#emits" name="emits" class="anchor">
+                  <span class="anchor-target" id="emits"></span>
                   <span class="glyphicon glyphicon-link"></span>
               </a>
           </h2>
