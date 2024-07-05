@@ -1,4 +1,4 @@
-import{_ as i,m as a,u,D as c,e as d,f as p,g as h,c as b,d as e,b as f,C as m,i as v,h as g,r as x,o as y}from"./index.340b03a8.js";const _=`<template>
+import{_ as i,m as a,u,D as c,e as d,f as p,g as h,c as b,d as e,b as f,C as m,i as v,h as g,r as x,o as y}from"./index.068162cb.js";const _=`<template>
   <div class="flex h-full flex-col">
     <div class="grow overflow-auto p-5">
       <BraveField
