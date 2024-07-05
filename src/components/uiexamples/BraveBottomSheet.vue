@@ -14,7 +14,7 @@
       fullHeight="90%"
       backDropOpacity="60%"
       backdropZIndex="2000"
-      backDropColor="green"
+      backDropColor="#000"
       zIndex="2001"
       v-slot="{up,down}"
     >
