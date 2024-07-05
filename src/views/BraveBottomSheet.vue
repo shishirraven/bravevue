@@ -61,6 +61,9 @@
             <p>
                 Bottom Sheets has a backdrop, and automaticaly closes when you click outside of it. You can style the bottom sheet with your own CSS classes.
             </p>
+
+
+
         <h3 id="live-example">Live Example</h3>
           <BrTaTabs class="not-prose" v-bind:tabs="['example','code']" initialTab="example">
               <template #tab-head-example>Basic Example</template>
@@ -71,53 +74,8 @@
               <template #tab-head-code>Source Code</template>
               <template #tab-panel-code>
                   <BrTaSyntaxHighlighter language="javascript">
-                      <template #title>BraveTabsExample.vue</template>
-                      <template #code>{{`<template>
-    <!-- Buttons to change the Sheets State to closed,half,full -->
-    <div class="flex lg:flex-row flex-col gap-2 mt-3">
-<!-- <button @click="state = 'closed'" type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Close Bottom Sheet</button> -->
-<button @click="state = 'half'" type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Half Open Bottom Sheet</button>
-<button @click="state = 'full'" class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:flex-1 ">Open Bottom Sheet to Full Height</button>
-        
-    </div>
-    <BraveBottomSheet
-      class="bg-slate-200 border border-slate-600 dark:bg-slate-900 rounded-t-3xl "
-      :state="state"
-      sheet-close="10%"
-      sheet-half-open="50%"
-      sheet-full-open="90%"
-      v-slot="{up,down}"
-      
-    >
-      <!-- DRAGGABLE HANDLE -->
-      <div  
-        v-SwipeUp="up"
-        v-SwipeDown="down" 
-        style="touch-action: none;"
-        class="p-4 flex justify-center touch-none cursor-ns-resize">
-        <div class="h-1 w-16 rounded-full bg-slate-500" ></div>
-      </div>
-      <!-- x-----x -->
-
-      <div class="px-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto eaque possimus, sit fugiat distinctio mollitia reiciendis incidunt corporis accusantium, consequuntur quos non ipsa dolorum sapiente debitis obcaecati asperiores cum.
-      </div>
-    </BraveBottomSheet>
-  </template>
-  <script>
-  import { BraveBottomSheet,SwipeUp, SwipeDown } from 'bravevue';
-  export default {
-    directives: { SwipeUp, SwipeDown },
-    components: {
-      BraveBottomSheet,
-    },
-    data() {
-      return {
-        state: "closed",
-      };
-    },
-  };
-  </script>`}}
+                      <template #title>BraveBottomSheet.vue</template>
+                      <template #code>{{codeSfcBraveBottomSheet}}
                       </template>
                   </BrTaSyntaxHighlighter>
               </template>
@@ -399,7 +357,129 @@ v-slot="{up,down}" >`}}</template>
                              , etc.
                       </p>
                   </td>
+
+                  
+
               </tr>
+              
+                  <!-- adding new props  backDropOpacity="60%"
+      backdropZIndex="2000"
+      backDropColor="#000"
+      zIndex="2001" -->
+                <tr>
+                    <td class="py-4 px-6">backDropOpacity</td>
+                    <td class="py-4 px-6">String</td>
+                    <td class="py-4 px-6">60%</td>
+                    <td class="py-4 px-6">
+                        <p>Opacity of the Backdrop</p>
+                        <p>
+                            Example : You could use any CSS opacity value like <br/>   
+                            <code class="text-blue-500" > 
+                                10%
+                            </code>
+                            , 
+                            <code class="text-blue-500" > 
+                                0.6
+                            </code>
+                            ,
+                            <code class="text-blue-500" > 
+                                0.9
+                            </code>
+    
+                            , 
+                            <code class="text-blue-500" > 
+                                1
+                            </code>
+                                 , etc.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-4 px-6">backdropZIndex</td>
+                    <td class="py-4 px-6">String</td>
+                    <td class="py-4 px-6">1000</td>
+                    <td class="py-4 px-6">
+                        <p>Z-Index of the Backdrop</p>
+                        <p>
+                            Example : You could use any CSS Z-Index value like <br/>   
+                            <code class="text-blue-500" > 
+                                10
+                            </code>
+                            , 
+                            <code class="text-blue-500" > 
+                                100
+                            </code>
+                            ,
+                            <code class="text-blue-500" > 
+                                1000
+                            </code>
+    
+                            , 
+                            <code class="text-blue-500" > 
+                                10000
+                            </code>
+                                 , etc.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-4 px-6">backDropColor</td>
+                    <td class="py-4 px-6">String</td>
+                    <td class="py-4 px-6">#000</td>
+                    <td class="py-4 px-6">
+                        <p>Color of the Backdrop</p>
+                        <p>
+                            Example : You could use any CSS Color value like <br/>
+                            <code class="text-blue-500" > 
+                                #000
+                            </code>
+                            ,
+                            <code class="text-blue-500" > 
+                                #fff
+                            </code>
+                            ,
+                            <code class="text-blue-500" > 
+                                #f00
+                            </code>
+
+                            ,
+                            <code class="text-blue-500" > 
+                                #00f
+                            </code>
+                                 , etc.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- zIndex -->
+                <tr>
+                    <td class="py-4 px-6">zIndex</td>
+                    <td class="py-4 px-6">String</td>
+                    <td class="py-4 px-6">1001</td>
+                    <td class="py-4 px-6">
+                        <p>Z-Index of the BottomSheet</p>
+                        <p>
+                            Example : You could use any CSS Z-Index value like <br/>   
+                            <code class="text-blue-500" > 
+                                10
+                            </code>
+                            , 
+                            <code class="text-blue-500" > 
+                                100
+                            </code>
+                            ,
+                            <code class="text-blue-500" > 
+                                1000
+                            </code>
+
+                            , 
+                            <code class="text-blue-500" > 
+                                10000
+                            </code>
+                                 , etc.
+                        </p>
+                    </td>
+                </tr>
               
           </table>
         </div>
@@ -449,12 +529,14 @@ v-slot="{up,down}" >`}}</template>
       </div>
   </main>
 </template>
+
 <script>
 import BrTaSyntaxHighlighter from "@/components/BrTaSyntaxHighlighter.vue";
 import { BraveGistEmbed } from "bravevue";
+import { SwipeUp, SwipeDown } from "bravevue";
+import codeSfcBraveBottomSheet from "@/components/uiexamples/BraveBottomSheet.vue?raw";
 import BrTaTabs from "@/components/brave_tailwind/BrTaTabs.vue";
-import BraveRadialMenu from "@/components/uiexamples/BrRadialMenu.vue";
-import PillsTab from "@/components/uiexamples/BraveTabs/PillsTab.vue";
+
 import BraveBottomSheet from "@/components/uiexamples/BraveBottomSheet.vue";
 import { useHead } from "@vueuse/head"
 useHead({
@@ -468,12 +550,20 @@ useHead({
         });
 
 export default { 
+    methods: {
+    handleError(err) {
+      console.log(err);
+    },
+  },
+    data: () => ({
+        codeSfcBraveBottomSheet,
+        registedDirectives: { SwipeUp, SwipeDown },
+    }),
+    directives: { SwipeUp, SwipeDown },
   components: {
-    BraveRadialMenu,
     BraveGistEmbed,
     BrTaSyntaxHighlighter,
     BrTaTabs,
-    PillsTab,
     BraveBottomSheet
 },
 };

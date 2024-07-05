@@ -12,16 +12,12 @@
       closeHeight="10%"
       halfHeight="50%"
       fullHeight="90%"
-      backDropOpacity="60%"
-      backdropZIndex="2000"
-      backDropColor="green"
-      zIndex="2001"
-      v-slot="{up,down}"
+   
+      
     >
       <!-- DRAGGABLE HANDLE -->
       <div  
-        v-SwipeUp="up"
-        v-SwipeDown="down" 
+    
         style="touch-action: none;"
         class="p-4 flex justify-center touch-none cursor-ns-resize">
         <div class="h-1 w-16 rounded-full bg-slate-500" ></div>
@@ -34,17 +30,17 @@
     </BraveBottomSheet>
   </template>
   <script>
-  import { BraveBottomSheet,SwipeUp, SwipeDown } from 'bravevue';
 
   export default {
 
-    directives: { SwipeUp, SwipeDown },
-    components: {
-      BraveBottomSheet,
-    },
+    //   directives: { SwipeUp, SwipeDown },
+    //   components: { BraveBottomSheet },
+   
     data() {
       return {
         state: "closed",
+        up : false,
+        down : false,
       };
     },
   };
